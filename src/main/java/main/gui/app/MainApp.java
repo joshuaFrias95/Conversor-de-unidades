@@ -9,11 +9,19 @@ import java.awt.event.MouseListener;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.plaf.basic.BasicButtonUI;
+import main.gui.modules.HomePanel;
 
 public class MainApp extends javax.swing.JFrame {
 
     public MainApp() {
+        
+        //setUndecorated(true);
+        setResizable(false);
+        
         initComponents();
+        
+        title.setFont(new Font("Verdana", Font.BOLD, 15));
+        title.setForeground(new Color(200, 200, 200));
         
         
         JButton [] actions = {
@@ -34,7 +42,18 @@ public class MainApp extends javax.swing.JFrame {
             menu5
         };
         
-        buttonStyle(menu, 68, 71, 90, 15);
+        buttonStyle(menu, 68, 71, 90, 17);
+        
+        
+        HomePanel home = new HomePanel();
+        home.setSize(840, 590);
+        home.setLocation(0, 0);
+        
+        content.removeAll();
+        content.add(home, BorderLayout.CENTER);
+        content.revalidate();
+        content.repaint();
+        
         
     }
 
@@ -45,7 +64,7 @@ public class MainApp extends javax.swing.JFrame {
         titleBar = new javax.swing.JPanel();
         dashboardTitleBar = new javax.swing.JPanel();
         mainTitleBar = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        title = new javax.swing.JLabel();
         cerrar = new javax.swing.JButton();
         minimizar = new javax.swing.JButton();
         main = new javax.swing.JPanel();
@@ -81,7 +100,7 @@ public class MainApp extends javax.swing.JFrame {
 
         mainTitleBar.setBackground(new java.awt.Color(40, 42, 54));
 
-        jLabel1.setText("Conversor de unidades ONE G5");
+        title.setText("Conversor de unidades ONE G5");
 
         cerrar.setText("X");
 
@@ -93,10 +112,10 @@ public class MainApp extends javax.swing.JFrame {
             mainTitleBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(mainTitleBarLayout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 541, Short.MAX_VALUE)
+                .addComponent(title)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 535, Short.MAX_VALUE)
                 .addComponent(minimizar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(cerrar)
                 .addGap(16, 16, 16))
         );
@@ -108,7 +127,7 @@ public class MainApp extends javax.swing.JFrame {
                     .addGroup(mainTitleBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(cerrar)
                         .addComponent(minimizar))
-                    .addComponent(jLabel1))
+                    .addComponent(title))
                 .addContainerGap())
         );
 
@@ -271,7 +290,6 @@ public class MainApp extends javax.swing.JFrame {
     private javax.swing.JPanel content;
     private javax.swing.JPanel dashboard;
     private javax.swing.JPanel dashboardTitleBar;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel main;
     private javax.swing.JPanel mainTitleBar;
@@ -281,6 +299,7 @@ public class MainApp extends javax.swing.JFrame {
     private javax.swing.JButton menu4;
     private javax.swing.JButton menu5;
     private javax.swing.JButton minimizar;
+    private javax.swing.JLabel title;
     private javax.swing.JPanel titleBar;
     // End of variables declaration//GEN-END:variables
 }
