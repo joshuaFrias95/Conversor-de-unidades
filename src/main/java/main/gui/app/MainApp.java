@@ -2,6 +2,7 @@ package main.gui.app;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Cursor;
 import java.awt.Font;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
@@ -13,6 +14,28 @@ public class MainApp extends javax.swing.JFrame {
 
     public MainApp() {
         initComponents();
+        
+        
+        JButton [] actions = {
+            minimizar,
+            cerrar
+            
+        };
+        
+        buttonStyle(actions, 40, 42, 54, 19);
+        
+        
+        
+        JButton [] menu = {
+            menu1,
+            menu2,
+            menu3,
+            menu4,
+            menu5
+        };
+        
+        buttonStyle(menu, 68, 71, 90, 15);
+        
     }
 
     @SuppressWarnings("unchecked")
@@ -23,16 +46,16 @@ public class MainApp extends javax.swing.JFrame {
         dashboardTitleBar = new javax.swing.JPanel();
         mainTitleBar = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        cerrar = new javax.swing.JButton();
+        minimizar = new javax.swing.JButton();
         main = new javax.swing.JPanel();
         dashboard = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
+        menu1 = new javax.swing.JButton();
+        menu2 = new javax.swing.JButton();
+        menu3 = new javax.swing.JButton();
+        menu4 = new javax.swing.JButton();
+        menu5 = new javax.swing.JButton();
         content = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -60,9 +83,9 @@ public class MainApp extends javax.swing.JFrame {
 
         jLabel1.setText("Conversor de unidades ONE G5");
 
-        jButton1.setText("X");
+        cerrar.setText("X");
 
-        jButton2.setText("_");
+        minimizar.setText("_");
 
         javax.swing.GroupLayout mainTitleBarLayout = new javax.swing.GroupLayout(mainTitleBar);
         mainTitleBar.setLayout(mainTitleBarLayout);
@@ -72,9 +95,9 @@ public class MainApp extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 541, Short.MAX_VALUE)
-                .addComponent(jButton2)
+                .addComponent(minimizar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1)
+                .addComponent(cerrar)
                 .addGap(16, 16, 16))
         );
         mainTitleBarLayout.setVerticalGroup(
@@ -83,8 +106,8 @@ public class MainApp extends javax.swing.JFrame {
                 .addContainerGap(19, Short.MAX_VALUE)
                 .addGroup(mainTitleBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(mainTitleBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButton1)
-                        .addComponent(jButton2))
+                        .addComponent(cerrar)
+                        .addComponent(minimizar))
                     .addComponent(jLabel1))
                 .addContainerGap())
         );
@@ -102,15 +125,15 @@ public class MainApp extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(68, 71, 90));
         jPanel1.setPreferredSize(new java.awt.Dimension(180, 470));
 
-        jButton3.setText("Divisas");
+        menu1.setText("Divisas");
 
-        jButton4.setText("Temperatura");
+        menu2.setText("Temperatura");
 
-        jButton5.setText("Medidas");
+        menu3.setText("Medidas");
 
-        jButton6.setText("Peso");
+        menu4.setText("Peso");
 
-        jButton8.setText("Bytes");
+        menu5.setText("Bytes");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -119,26 +142,26 @@ public class MainApp extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE)
-                    .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE))
+                    .addComponent(menu1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(menu2, javax.swing.GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE)
+                    .addComponent(menu3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE)
+                    .addComponent(menu4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE)
+                    .addComponent(menu5, javax.swing.GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(97, 97, 97)
-                .addComponent(jButton3)
+                .addComponent(menu1)
                 .addGap(18, 18, 18)
-                .addComponent(jButton4)
+                .addComponent(menu2)
                 .addGap(18, 18, 18)
-                .addComponent(jButton5)
+                .addComponent(menu3)
                 .addGap(18, 18, 18)
-                .addComponent(jButton6)
+                .addComponent(menu4)
                 .addGap(18, 18, 18)
-                .addComponent(jButton8)
+                .addComponent(menu5)
                 .addContainerGap(176, Short.MAX_VALUE))
         );
 
@@ -178,37 +201,32 @@ public class MainApp extends javax.swing.JFrame {
         content.repaint();
     }
     
-    private void buttonStyle(String font, JButton [] arrbtn, int bgr, int bgg, int bgb, int size) {
+    private void buttonStyle(JButton [] arrbtn, int bgr, int bgg, int bgb, int size) {
         
         for (JButton btn : arrbtn) {
             btn.setUI(new BasicButtonUI());
             btn.setBackground(new Color(bgr, bgg, bgb));
             btn.setForeground(new Color(200, 200, 200));
-            btn.setFont(new Font(font, Font.BOLD, size));
+            btn.setFont(new Font("Verdana", Font.PLAIN, size));
             btn.addMouseListener(new MouseListener() {
                 @Override
-                public void mouseClicked(MouseEvent me) {
-                    throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-                }
+                public void mouseClicked(MouseEvent me) {}
 
                 @Override
-                public void mousePressed(MouseEvent me) {
-                    throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-                }
+                public void mousePressed(MouseEvent me) {}
 
                 @Override
-                public void mouseReleased(MouseEvent me) {
-                    throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-                }
+                public void mouseReleased(MouseEvent me) {}
 
                 @Override
                 public void mouseEntered(MouseEvent me) {
-                    throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+                    btn.setForeground(new Color(225, 184, 108));
+                    btn.setCursor(new Cursor(Cursor.HAND_CURSOR));
                 }
 
                 @Override
                 public void mouseExited(MouseEvent me) {
-                    throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+                    btn.setForeground(new Color(200, 200, 200));
                 }
             });
         }
@@ -249,20 +267,20 @@ public class MainApp extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton cerrar;
     private javax.swing.JPanel content;
     private javax.swing.JPanel dashboard;
     private javax.swing.JPanel dashboardTitleBar;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel main;
     private javax.swing.JPanel mainTitleBar;
+    private javax.swing.JButton menu1;
+    private javax.swing.JButton menu2;
+    private javax.swing.JButton menu3;
+    private javax.swing.JButton menu4;
+    private javax.swing.JButton menu5;
+    private javax.swing.JButton minimizar;
     private javax.swing.JPanel titleBar;
     // End of variables declaration//GEN-END:variables
 }
