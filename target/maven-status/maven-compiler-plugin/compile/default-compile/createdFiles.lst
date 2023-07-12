@@ -1,8 +1,12 @@
+view/gui/app/MainApp$7.class
 view/gui/app/MainApp$4.class
 view/gui/app/MainApp$1.class
-view/gui/modules/HomePanel.class
+view/gui/panels/HomePanel.class
+view/gui/panels/MedidasPanel.class
 view/gui/app/MainApp$3.class
+view/gui/panels/TemperaturaPanel.class
 view/gui/app/MainApp.class
+view/gui/app/MainApp$6.class
 view/gui/app/MainApp$5.class
-view/gui/modules/DivisasPanel.class
 view/gui/app/MainApp$2.class
+view/gui/panels/DivisasPanel.class

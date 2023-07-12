@@ -9,8 +9,10 @@ import java.awt.event.MouseListener;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.plaf.basic.BasicButtonUI;
-import view.gui.modules.DivisasPanel;
-import view.gui.modules.HomePanel;
+import view.gui.panels.DivisasPanel;
+import view.gui.panels.HomePanel;
+import view.gui.panels.MedidasPanel;
+import view.gui.panels.TemperaturaPanel;
 
 public class MainApp extends javax.swing.JFrame {
 
@@ -163,8 +165,18 @@ public class MainApp extends javax.swing.JFrame {
         });
 
         menu2.setText("Temperatura");
+        menu2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menu2ActionPerformed(evt);
+            }
+        });
 
         menu3.setText("Medidas");
+        menu3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menu3ActionPerformed(evt);
+            }
+        });
 
         menu4.setText("Peso");
 
@@ -236,6 +248,16 @@ public class MainApp extends javax.swing.JFrame {
         DivisasPanel dp = new DivisasPanel();
         showPanel(dp);
     }//GEN-LAST:event_menu1ActionPerformed
+
+    private void menu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu2ActionPerformed
+        TemperaturaPanel tp = new TemperaturaPanel();
+        showPanel(tp);
+    }//GEN-LAST:event_menu2ActionPerformed
+
+    private void menu3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu3ActionPerformed
+        MedidasPanel mp = new MedidasPanel();
+        showPanel(mp);
+    }//GEN-LAST:event_menu3ActionPerformed
 
     private void showPanel(JPanel p) {
        
