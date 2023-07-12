@@ -17,7 +17,7 @@ public class HomePanel extends javax.swing.JPanel {
         
         try {
             
-            File file = new File("src/main/java/main/gui/img/aluraBlanco.png");
+            File file = new File("src/main/java/view/gui/img/aluraBlanco.png");
             BufferedImage bufferedImage = ImageIO.read(file);
             
             ImageIcon imageIcon = new ImageIcon(bufferedImage);
