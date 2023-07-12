@@ -1,4 +1,4 @@
-package main.gui.app;
+package view.gui.app;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -9,13 +9,14 @@ import java.awt.event.MouseListener;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.plaf.basic.BasicButtonUI;
-import main.gui.modules.HomePanel;
+import view.gui.modules.DivisasPanel;
+import view.gui.modules.HomePanel;
 
 public class MainApp extends javax.swing.JFrame {
 
     public MainApp() {
         
-        //setUndecorated(true);
+        setUndecorated(true);
         setResizable(false);
         
         initComponents();
@@ -103,8 +104,18 @@ public class MainApp extends javax.swing.JFrame {
         title.setText("Conversor de unidades ONE G5");
 
         cerrar.setText("X");
+        cerrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cerrarActionPerformed(evt);
+            }
+        });
 
         minimizar.setText("_");
+        minimizar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                minimizarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout mainTitleBarLayout = new javax.swing.GroupLayout(mainTitleBar);
         mainTitleBar.setLayout(mainTitleBarLayout);
@@ -145,6 +156,11 @@ public class MainApp extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(180, 470));
 
         menu1.setText("Divisas");
+        menu1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menu1ActionPerformed(evt);
+            }
+        });
 
         menu2.setText("Temperatura");
 
@@ -208,6 +224,19 @@ public class MainApp extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void cerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cerrarActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_cerrarActionPerformed
+
+    private void minimizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_minimizarActionPerformed
+        this.setExtendedState(ICONIFIED);
+    }//GEN-LAST:event_minimizarActionPerformed
+
+    private void menu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu1ActionPerformed
+        DivisasPanel dp = new DivisasPanel();
+        showPanel(dp);
+    }//GEN-LAST:event_menu1ActionPerformed
+
     private void showPanel(JPanel p) {
        
         p.setSize(840, 590);
@@ -226,7 +255,7 @@ public class MainApp extends javax.swing.JFrame {
             btn.setUI(new BasicButtonUI());
             btn.setBackground(new Color(bgr, bgg, bgb));
             btn.setForeground(new Color(200, 200, 200));
-            btn.setFont(new Font("Verdana", Font.PLAIN, size));
+            btn.setFont(new Font("Cantarell", Font.PLAIN, size));
             btn.addMouseListener(new MouseListener() {
                 @Override
                 public void mouseClicked(MouseEvent me) {}

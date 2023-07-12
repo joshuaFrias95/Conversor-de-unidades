@@ -2,18 +2,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package main.gui.modules;
+package view.gui.modules;
 
 /**
  *
  * @author lagrimasnegras
  */
-public class HomePanel extends javax.swing.JPanel {
+public class DivisasPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form HomePanel
+     * Creates new form DivisasPanel
      */
-    public HomePanel() {
+    public DivisasPanel() {
         initComponents();
     }
 
@@ -30,23 +30,23 @@ public class HomePanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(40, 42, 54));
 
-        jLabel1.setText("Challenge Conversor de unidades del programa ONE NEXT EDUCATION");
+        jLabel1.setText("Divisas");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(193, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 479, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(168, 168, 168))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(60, 60, 60)
+                .addComponent(jLabel1)
+                .addContainerGap(733, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(293, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(55, 55, 55)
                 .addComponent(jLabel1)
-                .addGap(278, 278, 278))
+                .addContainerGap(516, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

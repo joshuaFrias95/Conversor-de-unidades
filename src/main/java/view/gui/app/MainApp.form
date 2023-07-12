@@ -117,11 +117,17 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="X"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cerrarActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="minimizar">
               <Properties>
                 <Property name="text" type="java.lang.String" value="_"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="minimizarActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -207,6 +213,9 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Divisas"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menu1ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="menu2">
                   <Properties>

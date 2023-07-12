@@ -1,4 +1,8 @@
-main/gui/app/MainApp$2.class
-main/gui/app/MainApp$1.class
-main/gui/modules/HomePanel.class
-main/gui/app/MainApp.class
+view/gui/app/MainApp$4.class
+view/gui/app/MainApp$1.class
+view/gui/modules/HomePanel.class
+view/gui/app/MainApp$3.class
+view/gui/app/MainApp.class
+view/gui/app/MainApp$5.class
+view/gui/modules/DivisasPanel.class
+view/gui/app/MainApp$2.class
