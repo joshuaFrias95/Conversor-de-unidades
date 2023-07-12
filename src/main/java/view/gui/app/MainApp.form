@@ -237,11 +237,17 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Peso"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menu4ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="menu5">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Bytes"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menu5ActionPerformed"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>

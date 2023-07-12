@@ -9,9 +9,11 @@ import java.awt.event.MouseListener;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.plaf.basic.BasicButtonUI;
+import view.gui.panels.BytesPanel;
 import view.gui.panels.DivisasPanel;
 import view.gui.panels.HomePanel;
 import view.gui.panels.MedidasPanel;
+import view.gui.panels.PesoPanel;
 import view.gui.panels.TemperaturaPanel;
 
 public class MainApp extends javax.swing.JFrame {
@@ -179,8 +181,18 @@ public class MainApp extends javax.swing.JFrame {
         });
 
         menu4.setText("Peso");
+        menu4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menu4ActionPerformed(evt);
+            }
+        });
 
         menu5.setText("Bytes");
+        menu5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menu5ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -258,6 +270,16 @@ public class MainApp extends javax.swing.JFrame {
         MedidasPanel mp = new MedidasPanel();
         showPanel(mp);
     }//GEN-LAST:event_menu3ActionPerformed
+
+    private void menu4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu4ActionPerformed
+        PesoPanel pp = new PesoPanel();
+        showPanel(pp);
+    }//GEN-LAST:event_menu4ActionPerformed
+
+    private void menu5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu5ActionPerformed
+        BytesPanel bp = new BytesPanel();
+        showPanel(bp);
+    }//GEN-LAST:event_menu5ActionPerformed
 
     private void showPanel(JPanel p) {
        

@@ -9,15 +9,15 @@ import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.plaf.basic.BasicTextFieldUI;
 
-public class MedidasPanel extends javax.swing.JPanel {
+public class BytesPanel extends javax.swing.JPanel {
 
-    public MedidasPanel() {
+    public BytesPanel() {
         
         initComponents();
         
         try {
             
-            File file = new File("src/main/java/view/gui/img/icons/medidas.png");
+            File file = new File("src/main/java/view/gui/img/icons/bytes.png");
             BufferedImage bufferedImage = ImageIO.read(file);
             ImageIcon imageIcon = new ImageIcon(bufferedImage);
             
@@ -59,7 +59,7 @@ public class MedidasPanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(40, 42, 54));
 
-        panelTitle.setText("Conversor de medidas");
+        panelTitle.setText("Conversor de bytes");
 
         moduleIcon.setPreferredSize(new java.awt.Dimension(33, 33));
 
