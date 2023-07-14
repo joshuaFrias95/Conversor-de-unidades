@@ -1,9 +1,6 @@
 /home/lagrimasnegras/NetBeansProjects/Conversor/src/main/java/view/gui/modules/btns/Btns.java
-/home/lagrimasnegras/NetBeansProjects/Conversor/src/main/java/view/gui/panels/MedidasPanel.java
-/home/lagrimasnegras/NetBeansProjects/Conversor/src/main/java/view/gui/panels/PesoPanel.java
 /home/lagrimasnegras/NetBeansProjects/Conversor/src/main/java/view/gui/panels/DivisasPanel.java
 /home/lagrimasnegras/NetBeansProjects/Conversor/src/main/java/view/gui/app/App.java
-/home/lagrimasnegras/NetBeansProjects/Conversor/src/main/java/view/gui/panels/BytesPanel.java
-/home/lagrimasnegras/NetBeansProjects/Conversor/src/main/java/view/gui/panels/TemperaturaPanel.java
+/home/lagrimasnegras/NetBeansProjects/Conversor/src/main/java/view/gui/modules/btns/MenuBtns.java
+/home/lagrimasnegras/NetBeansProjects/Conversor/src/main/java/view/gui/modules/btns/TitleBtns.java
 /home/lagrimasnegras/NetBeansProjects/Conversor/src/main/java/view/gui/panels/HomePanel.java
-/home/lagrimasnegras/NetBeansProjects/Conversor/src/main/java/view/gui/modules/btns/MainBtns.java

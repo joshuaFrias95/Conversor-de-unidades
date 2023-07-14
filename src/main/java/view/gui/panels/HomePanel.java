@@ -12,8 +12,6 @@ public class HomePanel extends javax.swing.JPanel {
 
     public HomePanel() {
         
-        setBackground(new Color(0.30f, 0.30f, 0.46f, 0.75f));
-        
         initComponents();
          
         
