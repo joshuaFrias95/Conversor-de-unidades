@@ -12,6 +12,8 @@ public class HomePanel extends javax.swing.JPanel {
 
     public HomePanel() {
         
+        setBackground(new Color(0.30f, 0.30f, 0.46f, 0.75f));
+        
         initComponents();
          
         
@@ -53,8 +55,6 @@ public class HomePanel extends javax.swing.JPanel {
         titulo2 = new javax.swing.JLabel();
         titulo3 = new javax.swing.JLabel();
         logo = new javax.swing.JLabel();
-
-        setBackground(new java.awt.Color(40, 42, 54));
 
         titulo1.setText("Challenge Conversor de unidades del programa ONE NEXT EDUCATION");
 
