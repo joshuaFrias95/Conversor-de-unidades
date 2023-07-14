@@ -1,16 +1,17 @@
 package view.gui.panels;
 
 import java.awt.Color;
-import java.awt.Font;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
-import javax.swing.JLabel;
+import javax.swing.SwingConstants;
 
 public class HomePanel extends javax.swing.JPanel {
 
     public HomePanel() {
+        
+        setBackground(new Color(49, 50, 68));
         
         initComponents();
          
@@ -23,25 +24,14 @@ public class HomePanel extends javax.swing.JPanel {
             ImageIcon imageIcon = new ImageIcon(bufferedImage);
             
             logo.setIcon(imageIcon);
+            logo.setVerticalAlignment(SwingConstants.CENTER);
+            logo.setHorizontalAlignment(SwingConstants.CENTER);
             
         } catch (Exception e) {
             
             System.out.println("No pudo cargarse la imagen");
             
-        }
-        
-        JLabel [] textHome = {
-            titulo1,
-            titulo2,
-            titulo3
-        };
-
-        for (JLabel tx : textHome) {
-            tx.setForeground(new Color(200,200,200));
-            tx.setFont(new Font("Cantarell", Font.PLAIN, 15));
-        }
-        
-        
+        }    
         
     }
 
@@ -49,58 +39,50 @@ public class HomePanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        titulo1 = new javax.swing.JLabel();
-        titulo2 = new javax.swing.JLabel();
-        titulo3 = new javax.swing.JLabel();
         logo = new javax.swing.JLabel();
+        titleLabel1 = new view.gui.modules.titles.TitleLabel();
+        titleLabel3 = new view.gui.modules.titles.TitleLabel();
+        titleLabel2 = new view.gui.modules.titles.TitleLabel();
 
-        titulo1.setText("Challenge Conversor de unidades del programa ONE NEXT EDUCATION");
+        titleLabel1.setText("Realizado por Joshua Frías");
 
-        titulo2.setText("Realizado por Joshua Frías");
+        titleLabel3.setText("Challenge Conversor de unidades del programa ONE NEXT EDUCATION");
 
-        titulo3.setText("México 2023");
+        titleLabel2.setText("Realizado por Joshua Frías");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(logo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(titleLabel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 840, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(titulo2)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(362, 362, 362)
-                .addComponent(logo, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(179, Short.MAX_VALUE)
-                .addComponent(titulo1, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(161, 161, 161))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(364, 364, 364)
-                .addComponent(titulo3, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(titleLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(titleLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(92, Short.MAX_VALUE)
+                .addContainerGap(82, Short.MAX_VALUE)
                 .addComponent(logo, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(61, 61, 61)
-                .addComponent(titulo1)
+                .addGap(59, 59, 59)
+                .addComponent(titleLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(titulo2)
+                .addComponent(titleLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(titulo3)
-                .addGap(204, 204, 204))
+                .addComponent(titleLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(153, 153, 153))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel logo;
-    private javax.swing.JLabel titulo1;
-    private javax.swing.JLabel titulo2;
-    private javax.swing.JLabel titulo3;
+    private view.gui.modules.titles.TitleLabel titleLabel1;
+    private view.gui.modules.titles.TitleLabel titleLabel2;
+    private view.gui.modules.titles.TitleLabel titleLabel3;
     // End of variables declaration//GEN-END:variables
 }

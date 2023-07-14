@@ -16,61 +16,51 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="logo" alignment="0" max="32767" attributes="0"/>
+          <Component id="titleLabel3" alignment="1" pref="840" max="32767" attributes="0"/>
           <Group type="102" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
-              <Component id="titulo2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="362" max="-2" attributes="0"/>
-              <Component id="logo" min="-2" pref="91" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace pref="179" max="32767" attributes="0"/>
-              <Component id="titulo1" min="-2" pref="500" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="161" max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="364" max="-2" attributes="0"/>
-              <Component id="titulo3" min="-2" pref="96" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="titleLabel1" max="32767" attributes="0"/>
+                  <Component id="titleLabel2" alignment="0" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace pref="92" max="32767" attributes="0"/>
+              <EmptySpace pref="82" max="32767" attributes="0"/>
               <Component id="logo" min="-2" pref="140" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
-              <Component id="titulo1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
+              <Component id="titleLabel3" min="-2" pref="40" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="titulo2" min="-2" max="-2" attributes="0"/>
+              <Component id="titleLabel1" min="-2" pref="40" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="titulo3" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="204" max="-2" attributes="0"/>
+              <Component id="titleLabel2" min="-2" pref="40" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="153" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="titulo1">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Challenge Conversor de unidades del programa ONE NEXT EDUCATION"/>
-      </Properties>
+    <Component class="javax.swing.JLabel" name="logo">
     </Component>
-    <Component class="javax.swing.JLabel" name="titulo2">
+    <Component class="view.gui.modules.titles.TitleLabel" name="titleLabel1">
       <Properties>
         <Property name="text" type="java.lang.String" value="Realizado por Joshua Fr&#xed;as"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="titulo3">
+    <Component class="view.gui.modules.titles.TitleLabel" name="titleLabel3">
       <Properties>
-        <Property name="text" type="java.lang.String" value="M&#xe9;xico 2023"/>
+        <Property name="text" type="java.lang.String" value="Challenge Conversor de unidades del programa ONE NEXT EDUCATION"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="logo">
+    <Component class="view.gui.modules.titles.TitleLabel" name="titleLabel2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Realizado por Joshua Fr&#xed;as"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>
