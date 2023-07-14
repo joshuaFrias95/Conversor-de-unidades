@@ -4,6 +4,7 @@ view/gui/app/App.class
 view/gui/modules/btns/Btns$1.class
 view/gui/app/App$7.class
 view/gui/modules/btns/Btns.class
+view/gui/app/App$8.class
 view/gui/panels/TemperaturaPanel.class
 view/gui/panels/PesoPanel.class
 view/gui/panels/BytesPanel.class
