@@ -47,19 +47,19 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="logo">
     </Component>
-    <Component class="view.gui.modules.titles.TitleLabel" name="titleLabel1">
+    <Component class="view.gui.modules.labels.TitleLabel" name="titleLabel1">
       <Properties>
         <Property name="text" type="java.lang.String" value="Realizado por Joshua Fr&#xed;as"/>
       </Properties>
     </Component>
-    <Component class="view.gui.modules.titles.TitleLabel" name="titleLabel3">
+    <Component class="view.gui.modules.labels.TitleLabel" name="titleLabel3">
       <Properties>
         <Property name="text" type="java.lang.String" value="Challenge Conversor de unidades del programa ONE NEXT EDUCATION"/>
       </Properties>
     </Component>
-    <Component class="view.gui.modules.titles.TitleLabel" name="titleLabel2">
+    <Component class="view.gui.modules.labels.TitleLabel" name="titleLabel2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Realizado por Joshua Fr&#xed;as"/>
+        <Property name="text" type="java.lang.String" value="M&#xe9;xico, 2023"/>
       </Properties>
     </Component>
   </SubComponents>

@@ -2,12 +2,14 @@ view/gui/app/App$1.class
 view/gui/app/App.class
 view/gui/modules/btns/Btns$1.class
 view/gui/modules/btns/Btns.class
-view/gui/modules/titles/Labels.class
+view/gui/modules/labels/TitleLabel.class
 view/gui/app/App$4.class
-view/gui/modules/titles/TitleLabel.class
 view/gui/modules/btns/TitleBtns.class
+view/gui/modules/labels/PanelTitle.class
 view/gui/panels/HomePanel.class
 view/gui/app/App$3.class
+view/gui/modules/labels/labelImage.class
 view/gui/modules/btns/MenuBtns.class
 view/gui/app/App$2.class
 view/gui/panels/DivisasPanel.class
+view/gui/modules/labels/Labels.class

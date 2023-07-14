@@ -40,15 +40,15 @@ public class HomePanel extends javax.swing.JPanel {
     private void initComponents() {
 
         logo = new javax.swing.JLabel();
-        titleLabel1 = new view.gui.modules.titles.TitleLabel();
-        titleLabel3 = new view.gui.modules.titles.TitleLabel();
-        titleLabel2 = new view.gui.modules.titles.TitleLabel();
+        titleLabel1 = new view.gui.modules.labels.TitleLabel();
+        titleLabel3 = new view.gui.modules.labels.TitleLabel();
+        titleLabel2 = new view.gui.modules.labels.TitleLabel();
 
         titleLabel1.setText("Realizado por Joshua Frías");
 
         titleLabel3.setText("Challenge Conversor de unidades del programa ONE NEXT EDUCATION");
 
-        titleLabel2.setText("Realizado por Joshua Frías");
+        titleLabel2.setText("México, 2023");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -81,8 +81,8 @@ public class HomePanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel logo;
-    private view.gui.modules.titles.TitleLabel titleLabel1;
-    private view.gui.modules.titles.TitleLabel titleLabel2;
-    private view.gui.modules.titles.TitleLabel titleLabel3;
+    private view.gui.modules.labels.TitleLabel titleLabel1;
+    private view.gui.modules.labels.TitleLabel titleLabel2;
+    private view.gui.modules.labels.TitleLabel titleLabel3;
     // End of variables declaration//GEN-END:variables
 }
