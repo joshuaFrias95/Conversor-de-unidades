@@ -2,12 +2,12 @@ view/last/app/App.class
 view/last/modules/btns/Btns.class
 view/beans/Colors.class
 view/last/panels/DivisasPanel.class
-view/last/panels/HomePanel.class
 view/beans/Fonts.class
 view/last/app/App$1.class
 view/last/modules/btns/Btns$1.class
 view/last/modules/btns/TitleBtns.class
 view/modules/panels/LeftPane.class
+view/beans/Imports.class
 view/last/modules/btns/MenuBtns.class
 view/panels/HomePanel.class
 view/last/modules/labels/PanelTitle.class

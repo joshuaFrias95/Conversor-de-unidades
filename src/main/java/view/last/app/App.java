@@ -3,7 +3,6 @@ package view.last.app;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import javax.swing.JPanel;
-import view.last.panels.HomePanel;
 
 public class App extends javax.swing.JFrame {
 
@@ -13,16 +12,8 @@ public class App extends javax.swing.JFrame {
         setUndecorated(true);
         
         initComponents();
-        
-        HomePanel home = new HomePanel();
-        home.setSize(820, 600);
-        home.setLocation(0,0);
-        
-                
-        content.removeAll();
-        content.add(home, BorderLayout.CENTER);
-        content.revalidate();
-        content.repaint();
+   
+
         
         
         Color leftColor = new Color(69, 71, 90);

@@ -1,7 +1,7 @@
 package view;
 
 import java.awt.BorderLayout;
-import view.last.panels.HomePanel;
+import view.panels.HomePanel;
 
 
 public class App extends javax.swing.JFrame {
