@@ -1,4 +1,4 @@
-package view.gui.panels;
+package view.last.panels;
 
 import java.awt.Color;
 import java.awt.image.BufferedImage;
@@ -48,9 +48,6 @@ public class DivisasPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         moduleIcon = new javax.swing.JLabel();
-        panelTitle1 = new view.gui.modules.labels.PanelTitle();
-
-        panelTitle1.setText("Conversor de divisas");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -59,17 +56,13 @@ public class DivisasPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(36, 36, 36)
                 .addComponent(moduleIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(panelTitle1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(607, Short.MAX_VALUE))
+                .addContainerGap(772, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(41, 41, 41)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(panelTitle1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(moduleIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(moduleIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(497, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -77,6 +70,5 @@ public class DivisasPanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel moduleIcon;
-    private view.gui.modules.labels.PanelTitle panelTitle1;
     // End of variables declaration//GEN-END:variables
 }
