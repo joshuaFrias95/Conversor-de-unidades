@@ -1,6 +1,8 @@
 package view;
 
 import java.awt.BorderLayout;
+import javax.swing.JPanel;
+import view.panels.DivisasPanel;
 import view.panels.HomePanel;
 
 
@@ -9,16 +11,20 @@ public class App extends javax.swing.JFrame {
     public App() {
         
         setResizable(false);
-        //setUndecorated(true);
+        setUndecorated(true);
         
         initComponents();
         
         HomePanel home = new HomePanel();
-        home.setSize(820,590);
-        home.setLocation(0,0);
         
+        paintContent(home);
+    }
+
+    private void paintContent(JPanel panel) {
+        panel.setSize(820,590);
+        panel.setLocation(0,0);
         content.removeAll();
-        content.add(home, BorderLayout.CENTER);
+        content.add(panel, BorderLayout.CENTER);
         content.revalidate();
         content.repaint();
     }
@@ -30,6 +36,8 @@ public class App extends javax.swing.JFrame {
         title = new javax.swing.JPanel();
         leftPane1 = new view.modules.panels.LeftPane();
         rightPane1 = new view.modules.panels.RightPane();
+        titleBtns1 = new view.modules.btns.TitleBtns();
+        titleBtns2 = new view.modules.btns.TitleBtns();
         main = new javax.swing.JPanel();
         leftPane2 = new view.modules.panels.LeftPane();
         menuBtns1 = new view.modules.btns.MenuBtns();
@@ -61,15 +69,34 @@ public class App extends javax.swing.JFrame {
 
         rightPane1.setPreferredSize(new java.awt.Dimension(820, 50));
 
+        titleBtns1.setText("X");
+        titleBtns1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                titleBtns1ActionPerformed(evt);
+            }
+        });
+
+        titleBtns2.setText("_");
+
         javax.swing.GroupLayout rightPane1Layout = new javax.swing.GroupLayout(rightPane1);
         rightPane1.setLayout(rightPane1Layout);
         rightPane1Layout.setHorizontalGroup(
             rightPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 820, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, rightPane1Layout.createSequentialGroup()
+                .addContainerGap(770, Short.MAX_VALUE)
+                .addComponent(titleBtns2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(titleBtns1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(14, 14, 14))
         );
         rightPane1Layout.setVerticalGroup(
             rightPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, rightPane1Layout.createSequentialGroup()
+                .addContainerGap(21, Short.MAX_VALUE)
+                .addGroup(rightPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(titleBtns1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(titleBtns2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
 
         title.add(rightPane1, java.awt.BorderLayout.CENTER);
@@ -82,6 +109,11 @@ public class App extends javax.swing.JFrame {
         leftPane2.setPreferredSize(new java.awt.Dimension(200, 590));
 
         menuBtns1.setText("Divisas");
+        menuBtns1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuBtns1ActionPerformed(evt);
+            }
+        });
 
         menuBtns2.setText("Temperatura");
 
@@ -146,6 +178,19 @@ public class App extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void titleBtns1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_titleBtns1ActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_titleBtns1ActionPerformed
+
+    private void menuBtns1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuBtns1ActionPerformed
+        DivisasPanel dp = new DivisasPanel();
+        showPanel(dp);
+    }//GEN-LAST:event_menuBtns1ActionPerformed
+
+    private void showPanel(JPanel p) {
+        paintContent(p);
+    }
+    
     public static void main(String args[]) {
         
         java.awt.EventQueue.invokeLater(() -> {
@@ -167,5 +212,7 @@ public class App extends javax.swing.JFrame {
     private view.modules.btns.MenuBtns menuBtns5;
     private view.modules.panels.RightPane rightPane1;
     private javax.swing.JPanel title;
+    private view.modules.btns.TitleBtns titleBtns1;
+    private view.modules.btns.TitleBtns titleBtns2;
     // End of variables declaration//GEN-END:variables
 }

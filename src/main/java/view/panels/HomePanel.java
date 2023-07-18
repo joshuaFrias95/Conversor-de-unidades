@@ -1,10 +1,5 @@
 package view.panels;
 
-import java.awt.image.BufferedImage;
-import java.io.File;
-import javax.imageio.ImageIO;
-import javax.swing.ImageIcon;
-import javax.swing.SwingConstants;
 import view.beans.ColorBeans;
 import view.beans.ImportBeans;
 
