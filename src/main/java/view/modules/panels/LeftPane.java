@@ -1,13 +1,13 @@
 package view.modules.panels;
 
 import javax.swing.JPanel;
-import view.beans.Colors;
+import view.beans.ColorBeans;
 
 
 public class LeftPane extends JPanel {
 
     public LeftPane() {
-        setBackground(Colors.getLftColor());
+        setBackground(ColorBeans.getLftColor());
     }
     
 }

@@ -8,7 +8,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 
-public class Imports {
+public class ImportBeans {
     
     public void ImportImage(String url, JLabel label) {
         try {

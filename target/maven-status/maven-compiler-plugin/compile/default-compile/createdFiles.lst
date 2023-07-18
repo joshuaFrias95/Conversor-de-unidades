@@ -1,12 +1,15 @@
 view/last/app/App.class
 view/last/modules/btns/Btns.class
-view/beans/Colors.class
 view/last/panels/DivisasPanel.class
+view/modules/btns/Btns.class
+view/modules/btns/MenuBtns$1.class
+view/beans/ColorBeans.class
 view/last/app/App$1.class
 view/last/modules/btns/Btns$1.class
 view/last/modules/btns/TitleBtns.class
+view/beans/ImportBeans.class
 view/modules/panels/LeftPane.class
-view/beans/Imports.class
+view/modules/btns/MenuBtns.class
 view/last/modules/btns/MenuBtns.class
 view/panels/HomePanel.class
 view/last/modules/labels/PanelTitle.class
@@ -15,5 +18,6 @@ view/modules/panels/RightPane.class
 view/last/modules/labels/labelImage.class
 view/last/modules/labels/Labels.class
 view/App.class
-view/beans/TxtFonts.class
+view/modules/btns/Btns$1.class
 view/last/modules/labels/TitleLabel.class
+view/beans/FontBeans.class

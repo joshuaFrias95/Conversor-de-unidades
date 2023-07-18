@@ -5,19 +5,19 @@ import java.io.File;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.SwingConstants;
-import view.beans.Colors;
-import view.beans.Imports;
+import view.beans.ColorBeans;
+import view.beans.ImportBeans;
 
 public class HomePanel extends javax.swing.JPanel {
 
     public HomePanel() {
         
-        setBackground(Colors.getRgtColor());
+        setBackground(ColorBeans.getRgtColor());
         setSize(820, 590);
         
         initComponents();
         
-        new Imports().ImportImage("src/main/java/view/img/aluraBlanco.png", logo);
+        new ImportBeans().ImportImage("src/main/java/view/img/aluraBlanco.png", logo);
     }
 
     @SuppressWarnings("unchecked")

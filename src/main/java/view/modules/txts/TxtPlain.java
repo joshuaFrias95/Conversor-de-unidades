@@ -2,14 +2,14 @@ package view.modules.txts;
 
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
-import view.beans.Colors;
-import view.beans.TxtFonts;
+import view.beans.ColorBeans;
+import view.beans.FontBeans;
 
 public class TxtPlain extends JLabel {
 
     public TxtPlain() {
-        setForeground(Colors.getTxtColor());
-        setFont(TxtFonts.getTxtFont());
+        setForeground(ColorBeans.getTxtColor());
+        setFont(FontBeans.getTxtFont());
         setVerticalAlignment(SwingConstants.CENTER);
         setHorizontalAlignment(SwingConstants.CENTER);
     }
