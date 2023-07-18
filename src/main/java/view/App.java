@@ -1,6 +1,8 @@
 package view;
 
+import java.awt.BorderLayout;
 import view.last.panels.HomePanel;
+
 
 public class App extends javax.swing.JFrame {
 
@@ -12,8 +14,13 @@ public class App extends javax.swing.JFrame {
         initComponents();
         
         HomePanel home = new HomePanel();
-        //home.setSize(820, 600);
-        home.setLocation(0, 0);
+        home.setSize(820,590);
+        home.setLocation(0,0);
+        
+        content.removeAll();
+        content.add(home, BorderLayout.CENTER);
+        content.revalidate();
+        content.repaint();
     }
 
     @SuppressWarnings("unchecked")
@@ -25,7 +32,7 @@ public class App extends javax.swing.JFrame {
         rightPane1 = new view.modules.panels.RightPane();
         main = new javax.swing.JPanel();
         leftPane2 = new view.modules.panels.LeftPane();
-        jPanel1 = new javax.swing.JPanel();
+        content = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -82,20 +89,20 @@ public class App extends javax.swing.JFrame {
 
         main.add(leftPane2, java.awt.BorderLayout.WEST);
 
-        jPanel1.setPreferredSize(new java.awt.Dimension(820, 590));
+        content.setPreferredSize(new java.awt.Dimension(820, 590));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout contentLayout = new javax.swing.GroupLayout(content);
+        content.setLayout(contentLayout);
+        contentLayout.setHorizontalGroup(
+            contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 312, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        contentLayout.setVerticalGroup(
+            contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 250, Short.MAX_VALUE)
         );
 
-        main.add(jPanel1, java.awt.BorderLayout.CENTER);
+        main.add(content, java.awt.BorderLayout.CENTER);
 
         getContentPane().add(main, java.awt.BorderLayout.CENTER);
 
@@ -112,7 +119,7 @@ public class App extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel content;
     private view.modules.panels.LeftPane leftPane1;
     private view.modules.panels.LeftPane leftPane2;
     private javax.swing.JPanel main;
