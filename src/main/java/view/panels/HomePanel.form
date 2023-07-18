@@ -16,7 +16,10 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="logo" alignment="0" pref="820" max="32767" attributes="0"/>
+          <Component id="logo" alignment="0" max="32767" attributes="0"/>
+          <Component id="txtPlain1" alignment="1" pref="820" max="32767" attributes="0"/>
+          <Component id="txtPlain2" alignment="1" max="32767" attributes="0"/>
+          <Component id="txtPlain3" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -24,13 +27,34 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
               <Component id="logo" min="-2" pref="187" max="-2" attributes="0"/>
-              <EmptySpace pref="335" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+              <Component id="txtPlain1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="txtPlain2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="txtPlain3" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="200" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
     <Component class="javax.swing.JLabel" name="logo">
+    </Component>
+    <Component class="view.modules.txts.TxtPlain" name="txtPlain1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Challenge Conversor de unidades del programa Oracle Next Education"/>
+      </Properties>
+    </Component>
+    <Component class="view.modules.txts.TxtPlain" name="txtPlain2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Realizado por Joshua Fr&#xed;as"/>
+      </Properties>
+    </Component>
+    <Component class="view.modules.txts.TxtPlain" name="txtPlain3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="M&#xe9;xico, 2023"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>
