@@ -18,8 +18,25 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-              <Component id="jLabel1" min="-2" pref="32" max="-2" attributes="0"/>
-              <EmptySpace pref="754" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="jLabel1" min="-2" pref="32" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="panelTitle1" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="textField1" alignment="0" min="-2" pref="400" max="-2" attributes="0"/>
+                          <Component id="textField2" alignment="0" min="-2" pref="400" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="137" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="comboBox2" min="-2" pref="184" max="-2" attributes="0"/>
+                          <Component id="comboBox1" min="-2" pref="184" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+              <EmptySpace pref="65" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -27,14 +44,40 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-              <Component id="jLabel1" min="-2" pref="32" max="-2" attributes="0"/>
-              <EmptySpace pref="518" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="jLabel1" pref="32" max="32767" attributes="0"/>
+                  <Component id="panelTitle1" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="textField1" alignment="3" min="-2" pref="55" max="-2" attributes="0"/>
+                  <Component id="comboBox1" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="99" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="textField2" alignment="3" min="-2" pref="55" max="-2" attributes="0"/>
+                  <Component id="comboBox2" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="241" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
     <Component class="javax.swing.JLabel" name="jLabel1">
+    </Component>
+    <Component class="view.modules.txts.PanelTitle" name="panelTitle1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Conversor de divisas"/>
+      </Properties>
+    </Component>
+    <Component class="view.modules.textFields.textField" name="textField1">
+    </Component>
+    <Component class="view.modules.textFields.textField" name="textField2">
+    </Component>
+    <Component class="view.modules.comboBox.ComboBox" name="comboBox1">
+    </Component>
+    <Component class="view.modules.comboBox.ComboBox" name="comboBox2">
     </Component>
   </SubComponents>
 </Form>

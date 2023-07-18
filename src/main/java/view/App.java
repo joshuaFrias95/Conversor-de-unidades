@@ -16,6 +16,8 @@ public class App extends javax.swing.JFrame {
         initComponents();
         
         HomePanel home = new HomePanel();
+        home.setSize(820,590);
+        home.setLocation(0,0);
         
         paintContent(home);
     }
@@ -188,6 +190,9 @@ public class App extends javax.swing.JFrame {
     }//GEN-LAST:event_menuBtns1ActionPerformed
 
     private void showPanel(JPanel p) {
+        p.setSize(820, 590);
+        p.setLocation(0, 0);
+        
         paintContent(p);
     }
     

@@ -11,4 +11,7 @@
         <maven.compiler.target>20</maven.compiler.target>
         <exec.mainClass>main.Conversor</exec.mainClass>
     </properties>
+    <dependencies>
+
+    </dependencies>
 </project>
