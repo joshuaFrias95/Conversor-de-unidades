@@ -12,6 +12,11 @@
         <exec.mainClass>main.Conversor</exec.mainClass>
     </properties>
     <dependencies>
-
+        <dependency>
+            <groupId>net.java.dev.timingframework</groupId>
+            <artifactId>timingframework</artifactId>
+            <version>1.0</version>
+            <type>jar</type>
+        </dependency>
     </dependencies>
 </project>

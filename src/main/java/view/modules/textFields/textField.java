@@ -3,6 +3,8 @@ package view.modules.textFields;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
+import java.awt.event.FocusAdapter;
+import java.awt.event.FocusEvent;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 import view.beans.ColorBeans;
@@ -14,8 +16,16 @@ public class textField extends JTextField {
     public textField() {
         setBackground(ColorBeans.getRgtColor());
         setForeground(ColorBeans.getTxtColor());
+        setCaretColor(ColorBeans.getTxtColor());
         setFont(FontBeans.getTxtFFont());
         setBorder(new EmptyBorder(20, 3, 5, 3));
+        addFocusListener(new FocusAdapter(){
+            @Override
+            public void focusGained(FocusEvent e) {
+                getCaret().setVisible(true);
+            }
+        
+        });
     }
     
    @Override
