@@ -18,7 +18,7 @@ public class textField extends JTextField {
         setForeground(ColorBeans.getTxtColor());
         setCaretColor(ColorBeans.getTxtColor());
         setFont(FontBeans.getTxtFFont());
-        setBorder(new EmptyBorder(20, 3, 5, 3));
+        setBorder(new EmptyBorder(20, 15, 3, 3));
         addFocusListener(new FocusAdapter(){
             @Override
             public void focusGained(FocusEvent e) {

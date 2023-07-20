@@ -17,9 +17,9 @@ view/beans/ImportBeans.class
 view/modules/textFields/textField$1.class
 view/modules/panels/LeftPane.class
 view/panels/DivisasPanel.class
-view/modules/comboBox/ComboBox$ComboUI.class
 view/modules/btns/MenuBtns.class
 view/modules/btns/ActionBtn.class
 view/modules/panels/RightPane.class
 view/App.class
+view/modules/comboBox/ComboUI.class
 view/beans/FontBeans.class
