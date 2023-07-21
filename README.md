@@ -27,11 +27,9 @@ Mi objetivo principal al realizar el challenge fue crear un proyecto que, si bie
 
 
 <img align="right" height="200" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeTYzZzNwbDFsdGY5bHVvMWNnZjV4Yzl3eGlxeG45OXprdDl4dXNjbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/73ymNClJu3dyFugAl9/giphy.gif"/>
-<img  height="250" src="https://i.postimg.cc/vmhWjCNG/registro1.png"/>
-<img  height="250" src="https://i.postimg.cc/q74s1pQm/registro2.png"/>
-<img  height="250" src="https://i.postimg.cc/QC91FCxM/registro3.png"/>
-<img  height="250" src="https://i.postimg.cc/qRZ2ByrY/registro4.png"/>
-<img  height="250" src="https://i.postimg.cc/mDrQGVvC/registro5.png"/>
+<img   src="https://i.postimg.cc/vmhWjCNG/registro1.png"/>
+<img  src="https://i.postimg.cc/qRZ2ByrY/registro4.png"/>
+
 
 <br>
 
