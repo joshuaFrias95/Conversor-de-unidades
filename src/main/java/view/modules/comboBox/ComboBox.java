@@ -7,6 +7,7 @@ public class ComboBox extends JComboBox  {
 
     public ComboBox() {
         setEditable(false);
+        setUI(ComboUI.createUI(this));
         addItem("Unidad 1");
         addItem("Unidad 2");
         addItem("Unidad 3");

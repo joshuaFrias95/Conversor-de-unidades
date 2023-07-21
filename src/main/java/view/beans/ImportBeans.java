@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 
@@ -29,4 +30,19 @@ public class ImportBeans {
         }  
     }
     
+    public void ImportImage(String url, JButton btn) {
+        try {
+            
+            File file = new File(url);
+            BufferedImage bufferedImage = ImageIO.read(file);
+            
+            ImageIcon imageIcon = new ImageIcon(bufferedImage);
+            
+            btn.setIcon(imageIcon);
+        } catch (IOException e) {
+            
+            System.out.println("No pudo cargarse la imagen");
+            
+        }  
+    }    
 }
