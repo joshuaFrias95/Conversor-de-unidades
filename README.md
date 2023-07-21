@@ -26,9 +26,13 @@ Este proyecto se realizó con el fin de practicar y reforzar nuestros conocimien
 Mi objetivo principal al realizar el challenge fue crear un proyecto que, si bien es un ejercicio de cierta facilidad, pudiera tener no solo un diseño fresco, moderno y amigable para el usuario, sino también actualizado, escalable y organizado, sumandole un valor agregado y volviendolo más atractivo.
 
 
-<img align="center" height="300" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeTYzZzNwbDFsdGY5bHVvMWNnZjV4Yzl3eGlxeG45OXprdDl4dXNjbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/73ymNClJu3dyFugAl9/giphy.gif"/>
+<img align="right" height="200" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeTYzZzNwbDFsdGY5bHVvMWNnZjV4Yzl3eGlxeG45OXprdDl4dXNjbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/73ymNClJu3dyFugAl9/giphy.gif"/>
+<img  height="250" src="https://i.postimg.cc/vmhWjCNG/registro1.png"/>
+<img  height="250" src="https://i.postimg.cc/q74s1pQm/registro2.png"/>
+<img  height="250" src="https://i.postimg.cc/QC91FCxM/registro3.png"/>
+<img  height="250" src="https://i.postimg.cc/qRZ2ByrY/registro4.png"/>
+<img  height="250" src="https://i.postimg.cc/mDrQGVvC/registro5.png"/>
 
-<br>
 <br>
 
 # <img height="65" src="https://media.giphy.com/media/YWSPmaFoQG7f94QKJy/giphy.gif"/> Instrucciones de uso
