@@ -9,6 +9,11 @@ public class ColorBeans {
     static Color rgtColor = new Color(49, 50, 68);
     static Color txtColor = new Color(200, 200, 200);
     static Color txtBlack = new Color(16, 16, 16);
+    static Color comboColor = new Color(210, 210, 210);
+
+    public static Color getComboColor() {
+        return comboColor;
+    }
 
     public static Color getTxtBlack() {
         return txtBlack;

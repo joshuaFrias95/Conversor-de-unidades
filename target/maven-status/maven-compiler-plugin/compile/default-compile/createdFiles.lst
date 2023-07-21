@@ -13,6 +13,8 @@ view/modules/btns/ActionBtn$1.class
 view/modules/comboBox/ComboBox.class
 view/App$1.class
 view/beans/ColorBeans.class
+view/modules/comboBox/ComboUI$ArrowButton.class
+view/modules/comboBox/ComboBox$1.class
 view/beans/ImportBeans.class
 view/modules/textFields/textField$1.class
 view/modules/panels/LeftPane.class
