@@ -3,13 +3,13 @@ package view.panels;
 import view.beans.ImportBeans;
 import view.modules.contentPanels.ContentPanel;
 
-public class DivisasPanel extends ContentPanel {
+public class TempPanel extends ContentPanel {
 
-    public DivisasPanel() {
+    public TempPanel() {
         super();
         initComponents();
         
-        new ImportBeans().ImportImage("src/main/java/view/img/divisas.png", jLabel1);
+        new ImportBeans().ImportImage("src/main/java/view/img/temperatura.png", jLabel1);
 
     }
 
@@ -24,7 +24,7 @@ public class DivisasPanel extends ContentPanel {
         textField2 = new view.modules.textFields.textField();
         panelTitle1 = new view.modules.txts.PanelTitle();
 
-        panelTitle1.setText("Conversor de divisas");
+        panelTitle1.setText("Conversor de temperatura");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

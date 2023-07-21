@@ -2,8 +2,12 @@ package view;
 
 import java.awt.BorderLayout;
 import javax.swing.JPanel;
+import view.panels.BytesPanel;
 import view.panels.DivisasPanel;
 import view.panels.HomePanel;
+import view.panels.MedidasPanel;
+import view.panels.PesoPanel;
+import view.panels.TempPanel;
 
 
 public class App extends javax.swing.JFrame {
@@ -118,12 +122,32 @@ public class App extends javax.swing.JFrame {
         });
 
         menuBtns2.setText("Temperatura");
+        menuBtns2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuBtns2ActionPerformed(evt);
+            }
+        });
 
         menuBtns3.setText("Medidas");
+        menuBtns3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuBtns3ActionPerformed(evt);
+            }
+        });
 
         menuBtns4.setText("Peso");
+        menuBtns4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuBtns4ActionPerformed(evt);
+            }
+        });
 
         menuBtns5.setText("Bytes");
+        menuBtns5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuBtns5ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout leftPane2Layout = new javax.swing.GroupLayout(leftPane2);
         leftPane2.setLayout(leftPane2Layout);
@@ -188,6 +212,26 @@ public class App extends javax.swing.JFrame {
         DivisasPanel dp = new DivisasPanel();
         showPanel(dp);
     }//GEN-LAST:event_menuBtns1ActionPerformed
+
+    private void menuBtns5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuBtns5ActionPerformed
+        BytesPanel bp = new BytesPanel();
+        showPanel(bp);
+    }//GEN-LAST:event_menuBtns5ActionPerformed
+
+    private void menuBtns2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuBtns2ActionPerformed
+        TempPanel tp = new TempPanel();
+        showPanel(tp);
+    }//GEN-LAST:event_menuBtns2ActionPerformed
+
+    private void menuBtns3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuBtns3ActionPerformed
+        MedidasPanel mp = new MedidasPanel();
+        showPanel(mp);
+    }//GEN-LAST:event_menuBtns3ActionPerformed
+
+    private void menuBtns4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuBtns4ActionPerformed
+        PesoPanel pp = new PesoPanel();
+        showPanel(pp);
+    }//GEN-LAST:event_menuBtns4ActionPerformed
 
     private void showPanel(JPanel p) {
         p.setSize(820, 590);

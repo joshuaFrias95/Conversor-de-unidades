@@ -195,21 +195,33 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Temperatura"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuBtns2ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="view.modules.btns.MenuBtns" name="menuBtns3">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Medidas"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuBtns3ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="view.modules.btns.MenuBtns" name="menuBtns4">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Peso"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuBtns4ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="view.modules.btns.MenuBtns" name="menuBtns5">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Bytes"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuBtns5ActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
