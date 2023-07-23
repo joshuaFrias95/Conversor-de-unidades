@@ -18,6 +18,7 @@ public class TempPanel extends ContentPanel {
     public void fillCombo() {
         for (TempEnum data : TempEnum.values()) {
             tCombo1.addItem(data.getDataName());
+            tCombo2.addItem(data.getDataName());
         }
     }
 

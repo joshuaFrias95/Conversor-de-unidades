@@ -6,11 +6,19 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 
 public class ImportBeans {
     
+    /**
+     * Método que permite agregar imagenes a un JLabel
+     * 
+     * @param  url
+     * @param label 
+     * 
+     */
     public void ImportImage(String url, JLabel label) {
         try {
             
@@ -30,6 +38,13 @@ public class ImportBeans {
         }  
     }
     
+    
+    /**
+     * Método que permite agregar imagenes a un JButton
+     * 
+     * @param url
+     * @param btn 
+     */
     public void ImportImage(String url, JButton btn) {
         try {
             
@@ -45,4 +60,6 @@ public class ImportBeans {
             
         }  
     }    
+
+    
 }

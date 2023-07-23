@@ -1,12 +1,35 @@
 package model.enums;
 
+import java.util.Arrays;
+import java.util.List;
+
 public enum MedidasEnum {
     
-    MILIMETROS,
-    CENTIMETROS,
-    DECIMETROS,
-    METROS,
-    DECÁMETROS,
-    KILOMETROS
+    MILIMETROS("Milímetros"),
+    CENTIMETROS("Centímetros"),
+    DECIMETROS("Decímetros"),
+    METROS("Metros"),
+    DECÁMETROS("Decámetros"),
+    KILOMETROS("Kilómetros");
+    
+    private final String dataName;
+
+    private MedidasEnum(String dataName) {
+        this.dataName = dataName;
+    }
+    
+    public String getDataNanme() {
+        return dataName;
+    }
+    
+    public static List<MedidasEnum> getAllMedidasEnum() {
+        return Arrays.asList(MedidasEnum.values());
+    }
+
+    @Override
+    public String toString() {
+        return dataName;
+    }
+    
     
 }

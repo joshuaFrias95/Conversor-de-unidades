@@ -1,12 +1,32 @@
 package model.enums;
 
+import java.util.Arrays;
+import java.util.List;
+
 public enum PesoEnum {
     
-    GRAMO,
-    DECAGRAMO,
-    KILOGRAMO,
-    LIBRA,
-    ONZA,
-    TONELADA
+    GRAMO("Gramo"),
+    DECAGRAMO("Decagramo"),
+    KILOGRAMO("Kilogramo"),
+    LIBRA("Libra"),
+    ONZA("Onza"),
+    TONELADA("Tonelada");
+    
+    private final String dataName;
+
+    
+    private PesoEnum(String dataName) {
+        this.dataName = dataName;
+    }
+    
+    public static List<PesoEnum> getAllPesoEnums() {
+        return Arrays.asList(PesoEnum.values());
+    }
+
+    @Override
+    public String toString() {
+        return dataName;
+    }
+    
     
 }
