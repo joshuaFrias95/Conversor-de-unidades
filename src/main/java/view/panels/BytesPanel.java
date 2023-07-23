@@ -4,16 +4,13 @@ import model.enums.BytesEnum;
 import controller.beans.ImportBeans;
 import view.modules.contentPanels.ContentPanel;
 
-public class BytesPanel extends ContentPanel {
+public final class BytesPanel extends ContentPanel {
 
     public BytesPanel() {
-        super();
-        
-        
+        super();      
         initComponents();
         
-        bCombo1.addItem("Kilobyte");
-        bCombo2.addItem("Terabyte");
+        fillCombo();
         
         new ImportBeans().ImportImage("src/main/java/view/img/bytes.png", jLabel1);
 
@@ -21,7 +18,8 @@ public class BytesPanel extends ContentPanel {
     
     public void fillCombo() {
         for (BytesEnum data : BytesEnum.values()) {
-            bCombo1.addItem(data.toString());
+            bCombo1.addItem(data.getDataName());
+            bCombo2.addItem(data.getDataName());
         }
     }
 

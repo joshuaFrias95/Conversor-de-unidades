@@ -1,21 +1,28 @@
 package view.panels;
 
 import controller.beans.ImportBeans;
+import model.enums.MedidasEnum;
 import view.modules.contentPanels.ContentPanel;
 
-public class MedidasPanel extends ContentPanel {
+public final class MedidasPanel extends ContentPanel {
 
     public MedidasPanel() {
         super();
         initComponents();
         
-        distCombo1.addItem("Metro - m");
-        distCombo2.addItem("Centimetro - cm");
+        fillCombo();
         
         new ImportBeans().ImportImage("src/main/java/view/img/medidas.png", jLabel1);
 
     }
 
+    public void fillCombo() {
+        for (MedidasEnum data : MedidasEnum.values()) {
+           distCombo1.addItem(data.getDataName());
+           distCombo2.addItem(data.getDataName());
+        }
+    }
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {

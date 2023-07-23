@@ -29,8 +29,8 @@ public class ComboBox extends JComboBox  {
                 
                 if (bln) {
                     setBorder(comboBoredes);
-                    com.setBackground(ColorBeans.getLftColor());
-                    com.setForeground(ColorBeans.getTxtColor());
+                    com.setBackground(ColorBeans.getTxtColor());
+                    com.setForeground(ColorBeans.getTxtBlack());
                 }
                 return com;
             }

@@ -19,6 +19,10 @@ public enum PesoEnum {
         this.dataName = dataName;
     }
     
+    public String getDataName() {
+        return dataName;
+    }
+    
     public static List<PesoEnum> getAllPesoEnums() {
         return Arrays.asList(PesoEnum.values());
     }

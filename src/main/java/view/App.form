@@ -78,7 +78,9 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="770" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="txtPlain1" min="-2" pref="278" max="-2" attributes="0"/>
+                      <EmptySpace pref="486" max="32767" attributes="0"/>
                       <Component id="titleBtns2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="titleBtns1" min="-2" max="-2" attributes="0"/>
@@ -93,6 +95,7 @@
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="titleBtns1" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="titleBtns2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtPlain1" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -111,6 +114,11 @@
             <Component class="view.modules.btns.TitleBtns" name="titleBtns2">
               <Properties>
                 <Property name="text" type="java.lang.String" value="_"/>
+              </Properties>
+            </Component>
+            <Component class="view.modules.txts.TxtPlain" name="txtPlain1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Challenge Conversor de unidades - G5"/>
               </Properties>
             </Component>
           </SubComponents>
@@ -177,7 +185,7 @@
                       <Component id="menuBtns4" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="menuBtns5" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="184" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -201,7 +209,7 @@
             </Component>
             <Component class="view.modules.btns.MenuBtns" name="menuBtns3">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Medidas"/>
+                <Property name="text" type="java.lang.String" value="Distancia"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuBtns3ActionPerformed"/>

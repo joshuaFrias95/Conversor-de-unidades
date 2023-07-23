@@ -1,6 +1,5 @@
 package view.modules.comboBox;
 
-import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Rectangle;
 import javax.swing.JButton;

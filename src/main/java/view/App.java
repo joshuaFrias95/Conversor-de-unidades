@@ -44,6 +44,7 @@ public class App extends javax.swing.JFrame {
         rightPane1 = new view.modules.panels.RightPane();
         titleBtns1 = new view.modules.btns.TitleBtns();
         titleBtns2 = new view.modules.btns.TitleBtns();
+        txtPlain1 = new view.modules.txts.TxtPlain();
         main = new javax.swing.JPanel();
         leftPane2 = new view.modules.panels.LeftPane();
         menuBtns1 = new view.modules.btns.MenuBtns();
@@ -84,12 +85,16 @@ public class App extends javax.swing.JFrame {
 
         titleBtns2.setText("_");
 
+        txtPlain1.setText("Challenge Conversor de unidades - G5");
+
         javax.swing.GroupLayout rightPane1Layout = new javax.swing.GroupLayout(rightPane1);
         rightPane1.setLayout(rightPane1Layout);
         rightPane1Layout.setHorizontalGroup(
             rightPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, rightPane1Layout.createSequentialGroup()
-                .addContainerGap(770, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(txtPlain1, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 486, Short.MAX_VALUE)
                 .addComponent(titleBtns2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(titleBtns1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -101,7 +106,8 @@ public class App extends javax.swing.JFrame {
                 .addContainerGap(21, Short.MAX_VALUE)
                 .addGroup(rightPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(titleBtns1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(titleBtns2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(titleBtns2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtPlain1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
@@ -128,7 +134,7 @@ public class App extends javax.swing.JFrame {
             }
         });
 
-        menuBtns3.setText("Medidas");
+        menuBtns3.setText("Distancia");
         menuBtns3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 menuBtns3ActionPerformed(evt);
@@ -179,7 +185,7 @@ public class App extends javax.swing.JFrame {
                 .addComponent(menuBtns4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(menuBtns5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(184, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         main.add(leftPane2, java.awt.BorderLayout.WEST);
@@ -264,5 +270,6 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JPanel title;
     private view.modules.btns.TitleBtns titleBtns1;
     private view.modules.btns.TitleBtns titleBtns2;
+    private view.modules.txts.TxtPlain txtPlain1;
     // End of variables declaration//GEN-END:variables
 }

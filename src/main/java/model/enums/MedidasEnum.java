@@ -18,7 +18,7 @@ public enum MedidasEnum {
         this.dataName = dataName;
     }
     
-    public String getDataNanme() {
+    public String getDataName() {
         return dataName;
     }
     

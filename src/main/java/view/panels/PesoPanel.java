@@ -1,21 +1,28 @@
 package view.panels;
 
 import controller.beans.ImportBeans;
+import model.enums.PesoEnum;
 import view.modules.contentPanels.ContentPanel;
 
-public class PesoPanel extends ContentPanel {
+public final class PesoPanel extends ContentPanel {
 
     public PesoPanel() {
         super();
         initComponents();
         
-        pCombo1.addItem("Gramos- g");
-        pCombo2.addItem("Kilogramos - kg");
+        fillCombo();
         
         new ImportBeans().ImportImage("src/main/java/view/img/peso.png", jLabel1);
 
     }
 
+    private void fillCombo() {
+        for (PesoEnum data : PesoEnum.values()) {
+            pCombo1.addItem(data.getDataName());
+            pCombo2.addItem(data.getDataName());
+        }
+    }
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -78,4 +85,5 @@ public class PesoPanel extends ContentPanel {
     private view.modules.textFields.textField textField1;
     private view.modules.textFields.textField textField2;
     // End of variables declaration//GEN-END:variables
+
 }

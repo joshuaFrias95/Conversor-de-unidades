@@ -4,13 +4,14 @@ import model.enums.TempEnum;
 import controller.beans.ImportBeans;
 import view.modules.contentPanels.ContentPanel;
 
-public class TempPanel extends ContentPanel {
+public final class TempPanel extends ContentPanel {
 
     public TempPanel() {
         super();
         initComponents();
         
         fillCombo();
+        
         new ImportBeans().ImportImage("src/main/java/view/img/temperatura.png", jLabel1);
 
     }
