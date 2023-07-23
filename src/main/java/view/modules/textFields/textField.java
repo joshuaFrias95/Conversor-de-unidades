@@ -7,8 +7,8 @@ import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
-import view.beans.ColorBeans;
-import view.beans.FontBeans;
+import controller.beans.ColorBeans;
+import controller.beans.FontBeans;
 
 
 public class textField extends JTextField {

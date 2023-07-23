@@ -1,6 +1,6 @@
 package view.panels;
 
-import view.beans.ImportBeans;
+import controller.beans.ImportBeans;
 import view.modules.contentPanels.ContentPanel;
 
 public class PesoPanel extends ContentPanel {
@@ -9,8 +9,8 @@ public class PesoPanel extends ContentPanel {
         super();
         initComponents();
         
-        comboBox2.addItem("Gramos- g");
-        comboBox3.addItem("Kilogramos - kg");
+        pCombo1.addItem("Gramos- g");
+        pCombo2.addItem("Kilogramos - kg");
         
         new ImportBeans().ImportImage("src/main/java/view/img/peso.png", jLabel1);
 
@@ -21,9 +21,9 @@ public class PesoPanel extends ContentPanel {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        comboBox2 = new view.modules.comboBox.ComboBox();
+        pCombo1 = new view.modules.comboBox.ComboBox();
         textField1 = new view.modules.textFields.textField();
-        comboBox3 = new view.modules.comboBox.ComboBox();
+        pCombo2 = new view.modules.comboBox.ComboBox();
         textField2 = new view.modules.textFields.textField();
         panelTitle1 = new view.modules.txts.PanelTitle();
 
@@ -38,8 +38,8 @@ public class PesoPanel extends ContentPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(comboBox2, javax.swing.GroupLayout.DEFAULT_SIZE, 226, Short.MAX_VALUE)
-                            .addComponent(comboBox3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(pCombo1, javax.swing.GroupLayout.DEFAULT_SIZE, 226, Short.MAX_VALUE)
+                            .addComponent(pCombo2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(108, 108, 108)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(textField2, javax.swing.GroupLayout.DEFAULT_SIZE, 390, Short.MAX_VALUE)
@@ -59,11 +59,11 @@ public class PesoPanel extends ContentPanel {
                     .addComponent(panelTitle1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(47, 47, 47)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(comboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pCombo1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(textField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(154, 154, 154)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(comboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pCombo2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(textField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(221, Short.MAX_VALUE))
         );
@@ -71,9 +71,9 @@ public class PesoPanel extends ContentPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private view.modules.comboBox.ComboBox comboBox2;
-    private view.modules.comboBox.ComboBox comboBox3;
     private javax.swing.JLabel jLabel1;
+    private view.modules.comboBox.ComboBox pCombo1;
+    private view.modules.comboBox.ComboBox pCombo2;
     private view.modules.txts.PanelTitle panelTitle1;
     private view.modules.textFields.textField textField1;
     private view.modules.textFields.textField textField2;

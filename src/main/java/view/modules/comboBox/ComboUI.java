@@ -8,8 +8,8 @@ import javax.swing.JComponent;
 import javax.swing.border.EmptyBorder;
 import javax.swing.plaf.ComboBoxUI;
 import javax.swing.plaf.basic.BasicComboBoxUI;
-import view.beans.ColorBeans;
-import view.beans.ImportBeans;
+import controller.beans.ColorBeans;
+import controller.beans.ImportBeans;
 
 public class ComboUI extends BasicComboBoxUI {
      

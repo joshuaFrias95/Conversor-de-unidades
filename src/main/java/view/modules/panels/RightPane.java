@@ -1,7 +1,7 @@
 package view.modules.panels;
 
 import javax.swing.JPanel;
-import view.beans.ColorBeans;
+import controller.beans.ColorBeans;
 
 public class RightPane extends JPanel {
 

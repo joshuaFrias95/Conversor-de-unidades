@@ -2,7 +2,7 @@ package view.modules.btns;
 
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import view.beans.ColorBeans;
+import controller.beans.ColorBeans;
 
 public class TitleBtns extends Btns {
 

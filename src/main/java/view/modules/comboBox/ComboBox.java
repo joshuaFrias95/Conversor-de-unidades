@@ -6,8 +6,8 @@ import javax.swing.JComboBox;
 import javax.swing.JList;
 import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
-import view.beans.ColorBeans;
-import view.beans.FontBeans;
+import controller.beans.ColorBeans;
+import controller.beans.FontBeans;
 
 
 public class ComboBox extends JComboBox  {

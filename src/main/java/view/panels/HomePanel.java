@@ -1,7 +1,7 @@
 package view.panels;
 
-import view.beans.ColorBeans;
-import view.beans.ImportBeans;
+import controller.beans.ColorBeans;
+import controller.beans.ImportBeans;
 
 public class HomePanel extends javax.swing.JPanel {
 

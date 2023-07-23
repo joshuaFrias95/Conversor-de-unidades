@@ -7,7 +7,7 @@ import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.border.Border;
 import javax.swing.plaf.basic.BasicButtonUI;
-import view.beans.FontBeans;
+import controller.beans.FontBeans;
 
 public class Btns extends JButton {
 

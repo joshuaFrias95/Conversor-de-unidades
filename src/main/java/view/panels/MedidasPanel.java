@@ -1,6 +1,6 @@
 package view.panels;
 
-import view.beans.ImportBeans;
+import controller.beans.ImportBeans;
 import view.modules.contentPanels.ContentPanel;
 
 public class MedidasPanel extends ContentPanel {
@@ -9,8 +9,8 @@ public class MedidasPanel extends ContentPanel {
         super();
         initComponents();
         
-        comboBox2.addItem("Metro - m");
-        comboBox3.addItem("Centimetro - cm");
+        distCombo1.addItem("Metro - m");
+        distCombo2.addItem("Centimetro - cm");
         
         new ImportBeans().ImportImage("src/main/java/view/img/medidas.png", jLabel1);
 
@@ -21,13 +21,13 @@ public class MedidasPanel extends ContentPanel {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        comboBox2 = new view.modules.comboBox.ComboBox();
+        distCombo1 = new view.modules.comboBox.ComboBox();
         textField1 = new view.modules.textFields.textField();
-        comboBox3 = new view.modules.comboBox.ComboBox();
+        distCombo2 = new view.modules.comboBox.ComboBox();
         textField2 = new view.modules.textFields.textField();
         panelTitle1 = new view.modules.txts.PanelTitle();
 
-        panelTitle1.setText("Conversor de medidas");
+        panelTitle1.setText("Conversor de distancia");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -38,8 +38,8 @@ public class MedidasPanel extends ContentPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(comboBox2, javax.swing.GroupLayout.DEFAULT_SIZE, 226, Short.MAX_VALUE)
-                            .addComponent(comboBox3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(distCombo1, javax.swing.GroupLayout.DEFAULT_SIZE, 226, Short.MAX_VALUE)
+                            .addComponent(distCombo2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(108, 108, 108)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(textField2, javax.swing.GroupLayout.DEFAULT_SIZE, 390, Short.MAX_VALUE)
@@ -59,11 +59,11 @@ public class MedidasPanel extends ContentPanel {
                     .addComponent(panelTitle1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(47, 47, 47)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(comboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(distCombo1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(textField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(154, 154, 154)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(comboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(distCombo2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(textField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(221, Short.MAX_VALUE))
         );
@@ -71,8 +71,8 @@ public class MedidasPanel extends ContentPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private view.modules.comboBox.ComboBox comboBox2;
-    private view.modules.comboBox.ComboBox comboBox3;
+    private view.modules.comboBox.ComboBox distCombo1;
+    private view.modules.comboBox.ComboBox distCombo2;
     private javax.swing.JLabel jLabel1;
     private view.modules.txts.PanelTitle panelTitle1;
     private view.modules.textFields.textField textField1;

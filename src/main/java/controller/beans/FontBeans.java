@@ -1,4 +1,4 @@
-package view.beans;
+package controller.beans;
 
 import java.awt.Font;
 

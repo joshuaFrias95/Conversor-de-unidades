@@ -21,8 +21,8 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="comboBox2" pref="226" max="32767" attributes="0"/>
-                          <Component id="comboBox3" max="32767" attributes="0"/>
+                          <Component id="tCombo1" pref="226" max="32767" attributes="0"/>
+                          <Component id="tCombo2" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="108" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -50,12 +50,12 @@
               </Group>
               <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="comboBox2" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                  <Component id="tCombo1" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                   <Component id="textField1" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="154" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="comboBox3" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                  <Component id="tCombo2" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                   <Component id="textField2" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="221" max="32767" attributes="0"/>
@@ -66,11 +66,11 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="jLabel1">
     </Component>
-    <Component class="view.modules.comboBox.ComboBox" name="comboBox2">
+    <Component class="view.modules.comboBox.ComboBox" name="tCombo1">
     </Component>
     <Component class="view.modules.textFields.textField" name="textField1">
     </Component>
-    <Component class="view.modules.comboBox.ComboBox" name="comboBox3">
+    <Component class="view.modules.comboBox.ComboBox" name="tCombo2">
     </Component>
     <Component class="view.modules.textFields.textField" name="textField2">
     </Component>
