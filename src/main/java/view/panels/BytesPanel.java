@@ -9,6 +9,9 @@ public class BytesPanel extends ContentPanel {
         super();
         initComponents();
         
+        comboBox2.addItem("Kilobyte");
+        comboBox3.addItem("Terabyte");
+        
         new ImportBeans().ImportImage("src/main/java/view/img/bytes.png", jLabel1);
 
     }

@@ -8,6 +8,11 @@ public class FontBeans {
     static Font txtFFont = new Font("Verdana", Font.PLAIN, 19);
     static Font btnFont = new Font("Verdana", Font.PLAIN, 19);
     static Font txtFont = new Font("Arial", Font.PLAIN, 15);
+    static Font comboFont = new Font("Arial", Font.PLAIN, 13); 
+
+    public static Font getComboFont() {
+        return comboFont;
+    }
 
     public static Font getTxtFFont() {
         return txtFFont;

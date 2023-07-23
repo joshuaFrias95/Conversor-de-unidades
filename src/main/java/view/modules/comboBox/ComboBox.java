@@ -4,29 +4,31 @@ import java.awt.Component;
 import javax.swing.DefaultListCellRenderer;
 import javax.swing.JComboBox;
 import javax.swing.JList;
+import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
 import view.beans.ColorBeans;
+import view.beans.FontBeans;
 
 
 public class ComboBox extends JComboBox  {
 
     public ComboBox() {
-        addItem("Objeto 1");
-        addItem("Objeto 2");
-        addItem("Objeto 3");
-        addItem("Objeto 4");
-        addItem("Objeto 5");
+        
+        Border comboBoredes = new EmptyBorder(3, 3, 1, 0);
      
         setBackground(ColorBeans.getLftColor());
         setForeground(ColorBeans.getTxtColor());
+        setBorder(comboBoredes);
+        setFont(FontBeans.getComboFont());
         setUI(ComboUI.createUI(this));
+        
         setRenderer(new DefaultListCellRenderer(){
             @Override
             public Component getListCellRendererComponent(JList<?> list, Object o, int i, boolean bln, boolean bln1) {
                 Component com = super.getListCellRendererComponent(list, o, i, bln, bln1);
                 
                 if (bln) {
-                    setBorder(new EmptyBorder(5, 5, 5, 5));
+                    setBorder(comboBoredes);
                     com.setBackground(ColorBeans.getLftColor());
                     com.setForeground(ColorBeans.getTxtColor());
                 }

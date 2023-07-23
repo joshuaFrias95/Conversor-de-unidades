@@ -8,7 +8,8 @@ public class TempPanel extends ContentPanel {
     public TempPanel() {
         super();
         initComponents();
-        
+        comboBox2.addItem("Celsius - C°");
+        comboBox3.addItem("Fahrenheit - F°");
         new ImportBeans().ImportImage("src/main/java/view/img/temperatura.png", jLabel1);
 
     }

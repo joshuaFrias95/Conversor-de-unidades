@@ -9,6 +9,9 @@ public class PesoPanel extends ContentPanel {
         super();
         initComponents();
         
+        comboBox2.addItem("Gramos- g");
+        comboBox3.addItem("Kilogramos - kg");
+        
         new ImportBeans().ImportImage("src/main/java/view/img/peso.png", jLabel1);
 
     }

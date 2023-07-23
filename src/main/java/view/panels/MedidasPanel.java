@@ -9,6 +9,9 @@ public class MedidasPanel extends ContentPanel {
         super();
         initComponents();
         
+        comboBox2.addItem("Metro - m");
+        comboBox3.addItem("Centimetro - cm");
+        
         new ImportBeans().ImportImage("src/main/java/view/img/medidas.png", jLabel1);
 
     }

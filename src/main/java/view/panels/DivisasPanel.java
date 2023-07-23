@@ -9,6 +9,9 @@ public class DivisasPanel extends ContentPanel {
         super();
         initComponents();
         
+        comboBox2.addItem("MXN");
+        comboBox3.addItem("EUR");
+        
         new ImportBeans().ImportImage("src/main/java/view/img/divisas.png", jLabel1);
 
     }

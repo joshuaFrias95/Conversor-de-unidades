@@ -206,6 +206,7 @@ public class App extends javax.swing.JFrame {
 
     private void titleBtns1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_titleBtns1ActionPerformed
         this.dispose();
+        
     }//GEN-LAST:event_titleBtns1ActionPerformed
 
     private void menuBtns1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuBtns1ActionPerformed
