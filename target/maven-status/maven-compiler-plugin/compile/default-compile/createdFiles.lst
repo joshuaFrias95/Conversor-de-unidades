@@ -24,6 +24,7 @@ model/enums/temperatura/TempEnum.class
 model/enums/peso/PesoValuesEnum.class
 controller/interfaces/ComboBoxInterface.class
 model/enums/temperatura/TempValuesEnum.class
+controller/beans/ImportBeans$1.class
 view/modules/comboBox/ComboUI$ArrowButton.class
 view/App$5.class
 view/App$6.class

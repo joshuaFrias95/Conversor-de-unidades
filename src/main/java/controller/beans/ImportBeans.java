@@ -1,5 +1,7 @@
 package controller.beans;
 
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -7,6 +9,7 @@ import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
 /**
@@ -61,8 +64,31 @@ public class ImportBeans {
             System.out.println("No pudo cargarse la imagen");
             
         }  
-    }    
-    
-    
-    
+    }
+
+    public static void justNumbers(JTextField j1, JTextField j2) {
+        
+        JTextField[] txtflds = {
+          j1,
+          j2
+        };
+        
+        for (JTextField txtfld : txtflds) {
+            txtfld.addKeyListener(new KeyAdapter(){
+                
+                @Override
+                public void keyTyped(KeyEvent e) {
+                    
+                    char caracter = e.getKeyChar();
+                    
+                    if (((caracter < '0') || (caracter > '9')
+                            && (caracter != KeyEvent.VK_BACK_SPACE)
+                            && (caracter != '.') || txtfld.getText().contains("."))) {
+                        e.consume();
+                    }
+                }
+                
+            });
+        }
+    }
 }
