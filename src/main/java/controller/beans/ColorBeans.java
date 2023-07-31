@@ -1,7 +1,10 @@
 package controller.beans;
 
 import java.awt.Color;
-
+/**
+ * Clase utilizada para almacenar y gestionar los colores utilizados a lo largo
+ * de la interfaz gráfica 
+ */
 public class ColorBeans {
     
     

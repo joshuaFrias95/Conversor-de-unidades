@@ -1,4 +1,4 @@
-package model.enums;
+package model.enums.bytes;
 
 import java.util.Arrays;
 import java.util.List;

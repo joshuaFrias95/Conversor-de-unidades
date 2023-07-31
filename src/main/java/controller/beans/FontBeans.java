@@ -2,6 +2,10 @@ package controller.beans;
 
 import java.awt.Font;
 
+/**
+ * Clase utilizada para almacenar y gestionar los estilos de fuente 
+ * utilizados a lo largo del programa
+ */
 public class FontBeans {
     
     static Font titleFont = new Font("Verdana", Font.BOLD, 19);

@@ -1,26 +1,19 @@
 package view.panels;
 
-import model.enums.TempEnum;
+import model.enums.temperatura.TempEnum;
 import controller.beans.ImportBeans;
+import controller.interfaces.ComboBoxInterface;
 import view.modules.contentPanels.ContentPanel;
 
-public final class TempPanel extends ContentPanel {
+public final class TempPanel extends ContentPanel implements ComboBoxInterface {
 
     public TempPanel() {
         super();
-        initComponents();
-        
+        initComponents();       
         fillCombo();
         
         new ImportBeans().ImportImage("src/main/java/view/img/temperatura.png", jLabel1);
 
-    }
-    
-    public void fillCombo() {
-        for (TempEnum data : TempEnum.values()) {
-            tCombo1.addItem(data.getDataName());
-            tCombo2.addItem(data.getDataName());
-        }
     }
 
     @SuppressWarnings("unchecked")
@@ -85,4 +78,12 @@ public final class TempPanel extends ContentPanel {
     private view.modules.textFields.textField textField1;
     private view.modules.textFields.textField textField2;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void fillCombo() {
+        for (TempEnum data : TempEnum.values()) {
+            tCombo1.addItem(data.getDataName());
+            tCombo2.addItem(data.getDataName());
+        }
+    }
 }

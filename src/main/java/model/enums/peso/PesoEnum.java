@@ -1,4 +1,4 @@
-package model.enums;
+package model.enums.peso;
 
 import java.util.Arrays;
 import java.util.List;

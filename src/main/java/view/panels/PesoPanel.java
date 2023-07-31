@@ -1,28 +1,21 @@
 package view.panels;
 
 import controller.beans.ImportBeans;
-import model.enums.PesoEnum;
+import controller.interfaces.ComboBoxInterface;
+import model.enums.peso.PesoEnum;
 import view.modules.contentPanels.ContentPanel;
 
-public final class PesoPanel extends ContentPanel {
+public final class PesoPanel extends ContentPanel implements ComboBoxInterface {
 
     public PesoPanel() {
         super();
-        initComponents();
-        
+        initComponents();      
         fillCombo();
         
         new ImportBeans().ImportImage("src/main/java/view/img/peso.png", jLabel1);
 
     }
-
-    private void fillCombo() {
-        for (PesoEnum data : PesoEnum.values()) {
-            pCombo1.addItem(data.getDataName());
-            pCombo2.addItem(data.getDataName());
-        }
-    }
-    
+  
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -85,5 +78,13 @@ public final class PesoPanel extends ContentPanel {
     private view.modules.textFields.textField textField1;
     private view.modules.textFields.textField textField2;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void fillCombo() {
+        for (PesoEnum data : PesoEnum.values()) {
+            pCombo1.addItem(data.getDataName());
+            pCombo2.addItem(data.getDataName());
+        }
+    }
 
 }

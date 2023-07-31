@@ -3,6 +3,8 @@ package view.modules.btns;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import controller.beans.ColorBeans;
+import java.awt.event.FocusAdapter;
+import java.awt.event.FocusEvent;
 
 public class MenuBtns extends Btns {
 
@@ -22,6 +24,8 @@ public class MenuBtns extends Btns {
             }
             
         });
+
+        
     }
     
 }

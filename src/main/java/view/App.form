@@ -18,7 +18,6 @@
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
-    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,2,-128,0,0,3,-4"/>
   </AuxValues>
 
   <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
@@ -63,11 +62,6 @@
           </Layout>
         </Container>
         <Container class="view.modules.panels.RightPane" name="rightPane1">
-          <Properties>
-            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[820, 50]"/>
-            </Property>
-          </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
               <BorderConstraints direction="Center"/>
@@ -78,11 +72,7 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="txtPlain1" min="-2" pref="278" max="-2" attributes="0"/>
-                      <EmptySpace pref="486" max="32767" attributes="0"/>
-                      <Component id="titleBtns2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <EmptySpace pref="793" max="32767" attributes="0"/>
                       <Component id="titleBtns1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                   </Group>
@@ -92,11 +82,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace pref="21" max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="titleBtns1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="titleBtns2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtPlain1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="titleBtns1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -111,26 +97,11 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="titleBtns1ActionPerformed"/>
               </Events>
             </Component>
-            <Component class="view.modules.btns.TitleBtns" name="titleBtns2">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="_"/>
-              </Properties>
-            </Component>
-            <Component class="view.modules.txts.TxtPlain" name="txtPlain1">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Challenge Conversor de unidades - G5"/>
-              </Properties>
-            </Component>
           </SubComponents>
         </Container>
       </SubComponents>
     </Container>
     <Container class="javax.swing.JPanel" name="main">
-      <Properties>
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[1020, 590]"/>
-        </Property>
-      </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
           <BorderConstraints direction="Center"/>
@@ -155,18 +126,13 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="menuBtns1" pref="200" max="32767" attributes="0"/>
-                          <Component id="menuBtns2" max="32767" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="menuBtns3" alignment="0" max="32767" attributes="0"/>
-                          <Component id="menuBtns4" alignment="1" max="32767" attributes="0"/>
-                          <Component id="menuBtns5" alignment="1" max="32767" attributes="0"/>
+                          <Component id="divisasBtn" alignment="0" max="32767" attributes="0"/>
+                          <Component id="tempBtn" alignment="1" pref="188" max="32767" attributes="0"/>
+                          <Component id="distBtn" alignment="0" pref="188" max="32767" attributes="0"/>
+                          <Component id="pesoBtn" alignment="1" pref="188" max="32767" attributes="0"/>
+                          <Component id="bytesBtn" alignment="1" pref="188" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -175,70 +141,65 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="219" max="-2" attributes="0"/>
-                      <Component id="menuBtns1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="185" max="-2" attributes="0"/>
+                      <Component id="divisasBtn" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="menuBtns2" min="-2" max="-2" attributes="0"/>
+                      <Component id="tempBtn" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="menuBtns3" min="-2" max="-2" attributes="0"/>
+                      <Component id="distBtn" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="menuBtns4" min="-2" max="-2" attributes="0"/>
+                      <Component id="pesoBtn" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="menuBtns5" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="bytesBtn" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="218" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="view.modules.btns.MenuBtns" name="menuBtns1">
+            <Component class="view.modules.btns.MenuBtns" name="divisasBtn">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Divisas"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuBtns1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="divisasBtnActionPerformed"/>
               </Events>
             </Component>
-            <Component class="view.modules.btns.MenuBtns" name="menuBtns2">
+            <Component class="view.modules.btns.MenuBtns" name="tempBtn">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Temperatura"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuBtns2ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tempBtnActionPerformed"/>
               </Events>
             </Component>
-            <Component class="view.modules.btns.MenuBtns" name="menuBtns3">
+            <Component class="view.modules.btns.MenuBtns" name="distBtn">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Distancia"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuBtns3ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="distBtnActionPerformed"/>
               </Events>
             </Component>
-            <Component class="view.modules.btns.MenuBtns" name="menuBtns4">
+            <Component class="view.modules.btns.MenuBtns" name="pesoBtn">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Peso"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuBtns4ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pesoBtnActionPerformed"/>
               </Events>
             </Component>
-            <Component class="view.modules.btns.MenuBtns" name="menuBtns5">
+            <Component class="view.modules.btns.MenuBtns" name="bytesBtn">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Bytes"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuBtns5ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bytesBtnActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="content">
-          <Properties>
-            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[820, 590]"/>
-            </Property>
-          </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
               <BorderConstraints direction="Center"/>

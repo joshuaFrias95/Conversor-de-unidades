@@ -1,26 +1,19 @@
 package view.panels;
 
 import controller.beans.ImportBeans;
-import model.enums.MedidasEnum;
+import controller.interfaces.ComboBoxInterface;
+import model.enums.medidas.MedidasEnum;
 import view.modules.contentPanels.ContentPanel;
 
-public final class MedidasPanel extends ContentPanel {
+public final class MedidasPanel extends ContentPanel implements ComboBoxInterface {
 
     public MedidasPanel() {
         super();
-        initComponents();
-        
+        initComponents();      
         fillCombo();
         
         new ImportBeans().ImportImage("src/main/java/view/img/medidas.png", jLabel1);
 
-    }
-
-    public void fillCombo() {
-        for (MedidasEnum data : MedidasEnum.values()) {
-           distCombo1.addItem(data.getDataName());
-           distCombo2.addItem(data.getDataName());
-        }
     }
     
     @SuppressWarnings("unchecked")
@@ -85,4 +78,12 @@ public final class MedidasPanel extends ContentPanel {
     private view.modules.textFields.textField textField1;
     private view.modules.textFields.textField textField2;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void fillCombo() {
+        for (MedidasEnum data : MedidasEnum.values()) {
+            distCombo1.addItem(data.getDataName());
+            distCombo2.addItem(data.getDataName());
+        }
+    }
 }

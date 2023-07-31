@@ -2,8 +2,9 @@ package view.panels;
 
 import controller.beans.ImportBeans;
 import view.modules.contentPanels.ContentPanel;
+import controller.interfaces.ComboBoxInterface;
 
-public class DivisasPanel extends ContentPanel {
+public class DivisasPanel extends ContentPanel implements ComboBoxInterface {
 
     public DivisasPanel() {
         super();
@@ -78,4 +79,9 @@ public class DivisasPanel extends ContentPanel {
     private view.modules.textFields.textField textField1;
     private view.modules.textFields.textField textField2;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void fillCombo() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

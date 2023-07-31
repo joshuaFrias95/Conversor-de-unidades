@@ -6,10 +6,12 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 
+/**
+ * Clase utilizada para importar elementos gráficos 
+ */
 public class ImportBeans {
     
     /**
@@ -60,6 +62,7 @@ public class ImportBeans {
             
         }  
     }    
-
+    
+    
     
 }

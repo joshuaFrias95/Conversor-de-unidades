@@ -1,26 +1,19 @@
 package view.panels;
 
-import model.enums.BytesEnum;
+import model.enums.bytes.BytesEnum;
 import controller.beans.ImportBeans;
 import view.modules.contentPanels.ContentPanel;
+import controller.interfaces.ComboBoxInterface;
 
-public final class BytesPanel extends ContentPanel {
+public final class BytesPanel extends ContentPanel implements ComboBoxInterface{
 
     public BytesPanel() {
         super();      
-        initComponents();
-        
+        initComponents();       
         fillCombo();
         
         new ImportBeans().ImportImage("src/main/java/view/img/bytes.png", jLabel1);
 
-    }
-    
-    public void fillCombo() {
-        for (BytesEnum data : BytesEnum.values()) {
-            bCombo1.addItem(data.getDataName());
-            bCombo2.addItem(data.getDataName());
-        }
     }
 
     @SuppressWarnings("unchecked")
@@ -85,4 +78,12 @@ public final class BytesPanel extends ContentPanel {
     private view.modules.textFields.textField textField1;
     private view.modules.textFields.textField textField2;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void fillCombo() {
+        for (BytesEnum data : BytesEnum.values()) {
+            bCombo1.addItem(data.getDataName());
+            bCombo2.addItem(data.getDataName());
+        }
+    }
 }
