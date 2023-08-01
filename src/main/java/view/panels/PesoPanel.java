@@ -1,17 +1,23 @@
 package view.panels;
 
 import controller.beans.ImportBeans;
-import controller.interfaces.ComboBoxInterface;
-import model.enums.peso.PesoEnum;
 import view.modules.contentPanels.ContentPanel;
 
-public final class PesoPanel extends ContentPanel implements ComboBoxInterface {
+public final class PesoPanel extends ContentPanel {
 
+    String[] peso = {
+        "Gramo",
+        "Decagramo",
+        "Kilogramo",
+        "Libra",
+        "Onza",
+        "Tonelada"
+    };
     public PesoPanel() {
         super();
         initComponents();      
-        fillCombo();
         
+        ImportBeans.fillCombo(pCombo1, peso);
         ImportBeans.justPositiveNumbers(textField1, textField2);
         ImportBeans.ImportImage("src/main/java/view/img/peso.png", jLabel1);
 
@@ -27,6 +33,12 @@ public final class PesoPanel extends ContentPanel implements ComboBoxInterface {
         pCombo2 = new view.modules.comboBox.ComboBox();
         textField2 = new view.modules.textFields.textField();
         panelTitle1 = new view.modules.txts.PanelTitle();
+
+        pCombo1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pCombo1ActionPerformed(evt);
+            }
+        });
 
         panelTitle1.setText("Conversor de peso");
 
@@ -70,6 +82,10 @@ public final class PesoPanel extends ContentPanel implements ComboBoxInterface {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void pCombo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pCombo1ActionPerformed
+        ImportBeans.fillCombo(pCombo1, pCombo2, peso);
+    }//GEN-LAST:event_pCombo1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
@@ -79,13 +95,5 @@ public final class PesoPanel extends ContentPanel implements ComboBoxInterface {
     private view.modules.textFields.textField textField1;
     private view.modules.textFields.textField textField2;
     // End of variables declaration//GEN-END:variables
-
-    @Override
-    public void fillCombo() {
-        for (PesoEnum data : PesoEnum.values()) {
-            pCombo1.addItem(data.getDataName());
-            pCombo2.addItem(data.getDataName());
-        }
-    }
 
 }

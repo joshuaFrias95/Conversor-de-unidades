@@ -8,6 +8,7 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
@@ -65,6 +66,56 @@ public class ImportBeans {
         }
     }
 
+    /**
+     * Este método nos permite llenar el primer JComboBox de cada panel 
+     * que va a permitir realizar las operaciones de forma más sencilla,
+     * además de volver versátil al segundo.
+     * 
+     * @param com - JComboBox que se va a llenar
+     * @param values - String de valores que van a llenar el parámetro "com"
+     */
+    public static void fillCombo(JComboBox com, String[] values) {
+        for(int i = 0; i < values.length; i++) {
+            com.addItem(values[i]);
+        }
+    }
+    
+    public static void fillCombo(JComboBox com1, JComboBox com2, String[] values) {
+        switch (com1.getSelectedIndex()) {
+            case 0:
+                dynamicComboElements(values, com1, com2);
+                break;
+            case 1:
+                dynamicComboElements(values, com1, com2);
+                break;
+            case 2:
+                dynamicComboElements(values, com1, com2);
+                break;
+            case 3:
+                dynamicComboElements(values, com1, com2);
+            case 4:
+                dynamicComboElements(values, com1, com2);
+            case 5:
+                dynamicComboElements(values, com1, com2);
+            default:
+                break;
+        }
+        
+    }
+
+    private static void dynamicComboElements(String[] values, JComboBox com1, JComboBox com2) {
+        com2.removeAllItems();
+        for (int i = 0; i < values.length; i++) {
+            if (i != com1.getSelectedIndex()) {
+                com2.addItem(values[i]);
+            } else {
+                continue;
+            }
+        }
+    }
+    
+    
+    
     /**
      * El método justNumbers se encarga de restringir el uso de caracteres
      * alfabéticos y especiales para aceptar solamente números.

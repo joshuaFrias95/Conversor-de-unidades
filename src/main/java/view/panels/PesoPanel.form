@@ -67,6 +67,9 @@
     <Component class="javax.swing.JLabel" name="jLabel1">
     </Component>
     <Component class="view.modules.comboBox.ComboBox" name="pCombo1">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pCombo1ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="view.modules.textFields.textField" name="textField1">
     </Component>

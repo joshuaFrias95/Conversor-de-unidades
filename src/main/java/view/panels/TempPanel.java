@@ -1,17 +1,24 @@
 package view.panels;
 
-import model.enums.temperatura.TempEnum;
 import controller.beans.ImportBeans;
-import controller.interfaces.ComboBoxInterface;
 import view.modules.contentPanels.ContentPanel;
 
-public final class TempPanel extends ContentPanel implements ComboBoxInterface {
+public final class TempPanel extends ContentPanel {
 
+    String[] temp = {
+      "Celsius",
+      "Kelvin",
+      "Farenheit",
+      "Newton",
+      "Delisle",
+      "Roemer"
+    };
+    
     public TempPanel() {
         super();
         initComponents();       
-        fillCombo();
         
+        ImportBeans.fillCombo(tCombo1, temp);
         ImportBeans.justNumbers(textField1, textField2);
         ImportBeans.ImportImage("src/main/java/view/img/temperatura.png", jLabel1);
 
@@ -27,6 +34,12 @@ public final class TempPanel extends ContentPanel implements ComboBoxInterface {
         tCombo2 = new view.modules.comboBox.ComboBox();
         textField2 = new view.modules.textFields.textField();
         panelTitle1 = new view.modules.txts.PanelTitle();
+
+        tCombo1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tCombo1ActionPerformed(evt);
+            }
+        });
 
         panelTitle1.setText("Conversor de temperatura");
 
@@ -70,6 +83,10 @@ public final class TempPanel extends ContentPanel implements ComboBoxInterface {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void tCombo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tCombo1ActionPerformed
+        ImportBeans.fillCombo(tCombo1, tCombo2, temp);
+    }//GEN-LAST:event_tCombo1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
@@ -80,11 +97,4 @@ public final class TempPanel extends ContentPanel implements ComboBoxInterface {
     private view.modules.textFields.textField textField2;
     // End of variables declaration//GEN-END:variables
 
-    @Override
-    public void fillCombo() {
-        for (TempEnum data : TempEnum.values()) {
-            tCombo1.addItem(data.getDataName());
-            tCombo2.addItem(data.getDataName());
-        }
-    }
 }

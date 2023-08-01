@@ -1,17 +1,24 @@
 package view.panels;
 
-import model.enums.bytes.BytesEnum;
 import controller.beans.ImportBeans;
 import view.modules.contentPanels.ContentPanel;
-import controller.interfaces.ComboBoxInterface;
 
-public final class BytesPanel extends ContentPanel implements ComboBoxInterface{
+public final class BytesPanel extends ContentPanel {
 
+    String[] bytes = {
+        "Bit",
+        "Byte",
+        "Kilobyte",
+        "Megabyte",
+        "Gigabyte",
+        "Terabyte"
+    };
+  
     public BytesPanel() {
         super();      
         initComponents();       
-        fillCombo();
-        
+             
+        ImportBeans.fillCombo(bCombo1, bytes);
         ImportBeans.justPositiveNumbers(textField1, textField2);
         ImportBeans.ImportImage("src/main/java/view/img/bytes.png", jLabel1);
 
@@ -27,6 +34,12 @@ public final class BytesPanel extends ContentPanel implements ComboBoxInterface{
         bCombo2 = new view.modules.comboBox.ComboBox();
         textField2 = new view.modules.textFields.textField();
         panelTitle1 = new view.modules.txts.PanelTitle();
+
+        bCombo1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bCombo1ActionPerformed(evt);
+            }
+        });
 
         panelTitle1.setText("Conversor de bytes");
 
@@ -70,6 +83,11 @@ public final class BytesPanel extends ContentPanel implements ComboBoxInterface{
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void bCombo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCombo1ActionPerformed
+
+        ImportBeans.fillCombo(bCombo1, bCombo2, bytes);
+    }//GEN-LAST:event_bCombo1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private view.modules.comboBox.ComboBox bCombo1;
@@ -80,11 +98,4 @@ public final class BytesPanel extends ContentPanel implements ComboBoxInterface{
     private view.modules.textFields.textField textField2;
     // End of variables declaration//GEN-END:variables
 
-    @Override
-    public void fillCombo() {
-        for (BytesEnum data : BytesEnum.values()) {
-            bCombo1.addItem(data.getDataName());
-            bCombo2.addItem(data.getDataName());
-        }
-    }
 }

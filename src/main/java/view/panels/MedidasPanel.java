@@ -1,17 +1,24 @@
 package view.panels;
 
 import controller.beans.ImportBeans;
-import controller.interfaces.ComboBoxInterface;
-import model.enums.medidas.MedidasEnum;
 import view.modules.contentPanels.ContentPanel;
 
-public final class MedidasPanel extends ContentPanel implements ComboBoxInterface {
+public final class MedidasPanel extends ContentPanel {
 
+    String [] medidas = {
+        "Milímetros",
+        "Centímetros",
+        "Decímetros",
+        "Metros",
+        "Decámetros",
+        "Kilómetros"
+    };
+    
     public MedidasPanel() {
         super();
         initComponents();      
-        fillCombo();
         
+        ImportBeans.fillCombo(distCombo1, medidas);
         ImportBeans.justPositiveNumbers(textField1, textField2);
         ImportBeans.ImportImage("src/main/java/view/img/medidas.png", jLabel1);
 
@@ -27,6 +34,18 @@ public final class MedidasPanel extends ContentPanel implements ComboBoxInterfac
         distCombo2 = new view.modules.comboBox.ComboBox();
         textField2 = new view.modules.textFields.textField();
         panelTitle1 = new view.modules.txts.PanelTitle();
+
+        distCombo1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                distCombo1ActionPerformed(evt);
+            }
+        });
+
+        textField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textField1ActionPerformed(evt);
+            }
+        });
 
         panelTitle1.setText("Conversor de distancia");
 
@@ -70,6 +89,14 @@ public final class MedidasPanel extends ContentPanel implements ComboBoxInterfac
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void textField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textField1ActionPerformed
+
+    private void distCombo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_distCombo1ActionPerformed
+        ImportBeans.fillCombo(distCombo1, distCombo2, medidas);
+    }//GEN-LAST:event_distCombo1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private view.modules.comboBox.ComboBox distCombo1;
@@ -80,11 +107,4 @@ public final class MedidasPanel extends ContentPanel implements ComboBoxInterfac
     private view.modules.textFields.textField textField2;
     // End of variables declaration//GEN-END:variables
 
-    @Override
-    public void fillCombo() {
-        for (MedidasEnum data : MedidasEnum.values()) {
-            distCombo1.addItem(data.getDataName());
-            distCombo2.addItem(data.getDataName());
-        }
-    }
 }
