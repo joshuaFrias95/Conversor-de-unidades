@@ -9,6 +9,9 @@ import javax.swing.plaf.ComboBoxUI;
 import javax.swing.plaf.basic.BasicComboBoxUI;
 import controller.beans.ColorBeans;
 import controller.beans.ImportBeans;
+import javax.swing.border.LineBorder;
+import javax.swing.plaf.basic.BasicComboPopup;
+import javax.swing.plaf.basic.ComboPopup;
 
 public class ComboUI extends BasicComboBoxUI {
      
@@ -16,6 +19,15 @@ public class ComboUI extends BasicComboBoxUI {
         
         return new ComboUI();
     }
+
+    @Override
+    protected ComboPopup createPopup() {
+        BasicComboPopup basicComboPopUp = new BasicComboPopup(comboBox);
+        basicComboPopUp.setBorder(new LineBorder(ColorBeans.getLftColor()));
+        return basicComboPopUp;
+    }
+    
+    
 
     @Override
     protected JButton createArrowButton() {

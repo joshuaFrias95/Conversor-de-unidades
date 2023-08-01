@@ -20,6 +20,7 @@ public class ComboBox extends JComboBox  {
         setForeground(ColorBeans.getTxtColor());
         setBorder(comboBoredes);
         setFont(FontBeans.getComboFont());
+        setFocusable(false);
         setUI(ComboUI.createUI(this));
         
         setRenderer(new DefaultListCellRenderer(){
