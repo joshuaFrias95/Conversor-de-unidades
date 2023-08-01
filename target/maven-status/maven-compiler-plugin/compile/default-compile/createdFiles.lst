@@ -5,7 +5,6 @@ view/App$2.class
 view/App$4.class
 view/modules/btns/TitleBtns.class
 view/modules/btns/MenuBtns$1.class
-view/panels/MedidasPanel$2.class
 controller/beans/ImportBeans$2.class
 view/panels/TempPanel.class
 view/modules/textFields/textField.class
@@ -33,6 +32,7 @@ view/panels/MedidasPanel.class
 view/panels/MedidasPanel$1.class
 view/modules/comboBox/ComboBox$1.class
 controller/beans/FontBeans.class
+view/panels/DivisasPanel$1.class
 view/modules/textFields/textField$1.class
 view/modules/panels/LeftPane.class
 view/panels/DivisasPanel.class

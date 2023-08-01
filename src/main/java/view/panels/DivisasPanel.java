@@ -2,18 +2,15 @@ package view.panels;
 
 import controller.beans.ImportBeans;
 import view.modules.contentPanels.ContentPanel;
-import controller.interfaces.ComboBoxInterface;
 
-public class DivisasPanel extends ContentPanel implements ComboBoxInterface {
+public final class DivisasPanel extends ContentPanel {
 
     public DivisasPanel() {
         super();
-        initComponents();
-
+        initComponents();       
         
         ImportBeans.justPositiveNumbers(textField1, textField2);
         ImportBeans.ImportImage("src/main/java/view/img/divisas.png", jLabel1);
-
     }
 
     @SuppressWarnings("unchecked")
@@ -21,13 +18,22 @@ public class DivisasPanel extends ContentPanel implements ComboBoxInterface {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        dCombo1 = new view.modules.comboBox.ComboBox();
+        bCombo1 = new view.modules.comboBox.ComboBox();
         textField1 = new view.modules.textFields.textField();
-        dCombo2 = new view.modules.comboBox.ComboBox();
+        bCombo2 = new view.modules.comboBox.ComboBox();
         textField2 = new view.modules.textFields.textField();
         panelTitle1 = new view.modules.txts.PanelTitle();
+        convert = new view.modules.btns.ActionBtn();
+
+        bCombo1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bCombo1ActionPerformed(evt);
+            }
+        });
 
         panelTitle1.setText("Conversor de divisas");
+
+        convert.setText("Convertir");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -38,8 +44,8 @@ public class DivisasPanel extends ContentPanel implements ComboBoxInterface {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(dCombo1, javax.swing.GroupLayout.DEFAULT_SIZE, 226, Short.MAX_VALUE)
-                            .addComponent(dCombo2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(bCombo1, javax.swing.GroupLayout.DEFAULT_SIZE, 226, Short.MAX_VALUE)
+                            .addComponent(bCombo2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(108, 108, 108)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(textField2, javax.swing.GroupLayout.DEFAULT_SIZE, 390, Short.MAX_VALUE)
@@ -49,6 +55,10 @@ public class DivisasPanel extends ContentPanel implements ComboBoxInterface {
                         .addGap(18, 18, 18)
                         .addComponent(panelTitle1, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(convert, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(53, 53, 53))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -59,28 +69,31 @@ public class DivisasPanel extends ContentPanel implements ComboBoxInterface {
                     .addComponent(panelTitle1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(47, 47, 47)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(dCombo1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bCombo1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(textField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(154, 154, 154)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(dCombo2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bCombo2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(textField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(221, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 143, Short.MAX_VALUE)
+                .addComponent(convert, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(55, 55, 55))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void bCombo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCombo1ActionPerformed
+
+    }//GEN-LAST:event_bCombo1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private view.modules.comboBox.ComboBox dCombo1;
-    private view.modules.comboBox.ComboBox dCombo2;
+    private view.modules.comboBox.ComboBox bCombo1;
+    private view.modules.comboBox.ComboBox bCombo2;
+    private view.modules.btns.ActionBtn convert;
     private javax.swing.JLabel jLabel1;
     private view.modules.txts.PanelTitle panelTitle1;
     private view.modules.textFields.textField textField1;
     private view.modules.textFields.textField textField2;
     // End of variables declaration//GEN-END:variables
 
-    @Override
-    public void fillCombo() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 }

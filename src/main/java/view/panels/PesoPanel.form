@@ -21,8 +21,8 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="pCombo1" pref="226" max="32767" attributes="0"/>
-                          <Component id="pCombo2" max="32767" attributes="0"/>
+                          <Component id="bCombo1" pref="226" max="32767" attributes="0"/>
+                          <Component id="bCombo2" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="108" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -38,6 +38,11 @@
               </Group>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="convert" min="-2" pref="156" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -50,15 +55,17 @@
               </Group>
               <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="pCombo1" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                  <Component id="bCombo1" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                   <Component id="textField1" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="154" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="pCombo2" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                  <Component id="bCombo2" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                   <Component id="textField2" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="221" max="32767" attributes="0"/>
+              <EmptySpace pref="143" max="32767" attributes="0"/>
+              <Component id="convert" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -66,20 +73,25 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="jLabel1">
     </Component>
-    <Component class="view.modules.comboBox.ComboBox" name="pCombo1">
+    <Component class="view.modules.comboBox.ComboBox" name="bCombo1">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pCombo1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bCombo1ActionPerformed"/>
       </Events>
     </Component>
     <Component class="view.modules.textFields.textField" name="textField1">
     </Component>
-    <Component class="view.modules.comboBox.ComboBox" name="pCombo2">
+    <Component class="view.modules.comboBox.ComboBox" name="bCombo2">
     </Component>
     <Component class="view.modules.textFields.textField" name="textField2">
     </Component>
     <Component class="view.modules.txts.PanelTitle" name="panelTitle1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Conversor de peso"/>
+        <Property name="text" type="java.lang.String" value="Conversor de Peso"/>
+      </Properties>
+    </Component>
+    <Component class="view.modules.btns.ActionBtn" name="convert">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Convertir"/>
       </Properties>
     </Component>
   </SubComponents>
