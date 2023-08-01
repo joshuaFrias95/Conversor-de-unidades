@@ -12,7 +12,8 @@ public final class MedidasPanel extends ContentPanel implements ComboBoxInterfac
         initComponents();      
         fillCombo();
         
-        new ImportBeans().ImportImage("src/main/java/view/img/medidas.png", jLabel1);
+        ImportBeans.justPositiveNumbers(textField1, textField2);
+        ImportBeans.ImportImage("src/main/java/view/img/medidas.png", jLabel1);
 
     }
     

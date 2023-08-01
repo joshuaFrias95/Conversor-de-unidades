@@ -11,8 +11,8 @@ public final class TempPanel extends ContentPanel implements ComboBoxInterface {
         super();
         initComponents();       
         fillCombo();
-        ImportBeans.justNumbers(textField1, textField2);
         
+        ImportBeans.justNumbers(textField1, textField2);
         ImportBeans.ImportImage("src/main/java/view/img/temperatura.png", jLabel1);
 
     }

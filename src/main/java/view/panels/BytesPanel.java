@@ -12,7 +12,8 @@ public final class BytesPanel extends ContentPanel implements ComboBoxInterface{
         initComponents();       
         fillCombo();
         
-        new ImportBeans().ImportImage("src/main/java/view/img/bytes.png", jLabel1);
+        ImportBeans.justPositiveNumbers(textField1, textField2);
+        ImportBeans.ImportImage("src/main/java/view/img/bytes.png", jLabel1);
 
     }
 

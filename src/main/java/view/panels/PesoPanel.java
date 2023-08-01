@@ -12,7 +12,8 @@ public final class PesoPanel extends ContentPanel implements ComboBoxInterface {
         initComponents();      
         fillCombo();
         
-        new ImportBeans().ImportImage("src/main/java/view/img/peso.png", jLabel1);
+        ImportBeans.justPositiveNumbers(textField1, textField2);
+        ImportBeans.ImportImage("src/main/java/view/img/peso.png", jLabel1);
 
     }
   

@@ -27,4 +27,5 @@
 /home/lagrimasnegras/NetBeansProjects/Conversor/src/main/java/model/enums/peso/PesoEnum.java
 /home/lagrimasnegras/NetBeansProjects/Conversor/src/main/java/model/enums/temperatura/TempEnum.java
 /home/lagrimasnegras/NetBeansProjects/Conversor/src/main/java/controller/beans/ColorBeans.java
+/home/lagrimasnegras/NetBeansProjects/Conversor/src/main/java/controller/interfaces/ComboBoxInterface.java
 /home/lagrimasnegras/NetBeansProjects/Conversor/src/main/java/model/enums/bytes/BytesValuesEnum.java

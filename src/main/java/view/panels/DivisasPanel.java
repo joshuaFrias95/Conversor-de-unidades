@@ -9,11 +9,10 @@ public class DivisasPanel extends ContentPanel implements ComboBoxInterface {
     public DivisasPanel() {
         super();
         initComponents();
+
         
-        dCombo1.addItem("MXN");
-        dCombo2.addItem("EUR");
-        
-        new ImportBeans().ImportImage("src/main/java/view/img/divisas.png", jLabel1);
+        ImportBeans.justPositiveNumbers(textField1, textField2);
+        ImportBeans.ImportImage("src/main/java/view/img/divisas.png", jLabel1);
 
     }
 
