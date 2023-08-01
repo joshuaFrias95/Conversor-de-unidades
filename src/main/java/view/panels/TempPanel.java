@@ -34,6 +34,7 @@ public final class TempPanel extends ContentPanel {
         tCombo2 = new view.modules.comboBox.ComboBox();
         textField2 = new view.modules.textFields.textField();
         panelTitle1 = new view.modules.txts.PanelTitle();
+        actionBtn1 = new view.modules.btns.ActionBtn();
 
         tCombo1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -42,6 +43,8 @@ public final class TempPanel extends ContentPanel {
         });
 
         panelTitle1.setText("Conversor de temperatura");
+
+        actionBtn1.setText("Convertir");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -63,6 +66,10 @@ public final class TempPanel extends ContentPanel {
                         .addGap(18, 18, 18)
                         .addComponent(panelTitle1, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(actionBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(53, 53, 53))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -79,7 +86,9 @@ public final class TempPanel extends ContentPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tCombo2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(textField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(221, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 143, Short.MAX_VALUE)
+                .addComponent(actionBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(55, 55, 55))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -89,6 +98,7 @@ public final class TempPanel extends ContentPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private view.modules.btns.ActionBtn actionBtn1;
     private javax.swing.JLabel jLabel1;
     private view.modules.txts.PanelTitle panelTitle1;
     private view.modules.comboBox.ComboBox tCombo1;
