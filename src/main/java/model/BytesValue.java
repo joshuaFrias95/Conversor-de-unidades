@@ -1,6 +1,7 @@
 package model;
 
-import view.panels.BytesPanel;
 
 public class BytesValue {
+    
+    public static double bit = 8d;
 }
