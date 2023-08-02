@@ -1,7 +1,9 @@
 package view.panels;
 
 import controller.beans.ImportBeans;
+import controller.logic.ValueReader;
 import view.modules.contentPanels.ContentPanel;
+import view.modules.textFields.textField;
 
 public final class BytesPanel extends ContentPanel {
 
@@ -14,6 +16,7 @@ public final class BytesPanel extends ContentPanel {
         "Terabyte"
     };
     
+        
     public BytesPanel() {
         super();
         initComponents();       
@@ -42,9 +45,16 @@ public final class BytesPanel extends ContentPanel {
             }
         });
 
+        textField2.setEnabled(false);
+
         panelTitle1.setText("Conversor de bytes");
 
         convert.setText("Convertir");
+        convert.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                convertActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -95,6 +105,12 @@ public final class BytesPanel extends ContentPanel {
     private void bCombo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCombo1ActionPerformed
         ImportBeans.fillCombo(bCombo1, bCombo2, bytes);
     }//GEN-LAST:event_bCombo1ActionPerformed
+
+    private void convertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_convertActionPerformed
+            ValueReader.readerValue(bCombo1, bCombo2, textField1, textField2);
+//        Integer valor = Integer.valueOf(textField1.getText()); 
+//        textField2.setText(Integer.toString(valor));
+    }//GEN-LAST:event_convertActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
