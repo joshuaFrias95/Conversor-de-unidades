@@ -3,6 +3,7 @@ package view;
 import java.awt.BorderLayout;
 import javax.swing.JPanel;
 import view.panels.LongitudPanel;
+import view.panels.MasaPanel;
 import view.panels.TempPanel;
 
 public class App extends javax.swing.JFrame {
@@ -14,7 +15,7 @@ public class App extends javax.swing.JFrame {
         
         initComponents();
         
-       paintContent(new LongitudPanel());
+       paintContent(new MasaPanel());
     }
 
     @SuppressWarnings("unchecked")
@@ -107,7 +108,7 @@ public class App extends javax.swing.JFrame {
             }
         });
 
-        pesoBtn.setText("Peso");
+        pesoBtn.setText("Masa");
         pesoBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pesoBtnActionPerformed(evt);
@@ -188,7 +189,7 @@ public class App extends javax.swing.JFrame {
     }//GEN-LAST:event_distBtnActionPerformed
 
     private void pesoBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pesoBtnActionPerformed
-        //paintContent(new PesoPanel2());
+        paintContent(new MasaPanel());
     }//GEN-LAST:event_pesoBtnActionPerformed
 
     private void bytesBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bytesBtnActionPerformed

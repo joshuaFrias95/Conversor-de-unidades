@@ -4,23 +4,23 @@ import controller.beans.ImportBeans;
 import controller.logic.LongLogic;
 import controller.templates.ValuesReadersInterface;
 
-public class LongitudPanel extends javax.swing.JPanel implements ValuesReadersInterface {
+public class MasaPanel extends javax.swing.JPanel implements ValuesReadersInterface {
     
 
-    String[] smi = {
-        "Milímetros",
-        "Centímetros",
-        "Metros",
-        "Kilómetros"
+    String[] masa = {
+        "Milígramo",
+        "Gramo",
+        "Kilogramo",
+        "Tonelada"
     };
     
-    public LongitudPanel() {
+    public MasaPanel() {
         initComponents();
         
         ImportBeans.justNumbers(textField1, textField2);
-        ImportBeans.fillCombo(comboBox1, smi);
+        ImportBeans.fillCombo(comboBox1, masa);
         ImportBeans.ImportImage("src/main/java/view/img/medidas.png", jLabel1);
-        ImportBeans.ImportImage("src/main/java/view/img/convertir.png", actionBtn1);
+        ImportBeans.ImportImage("src/main/java/view/img/peso.png", actionBtn1);
     }
     
     @SuppressWarnings("unchecked")
@@ -38,7 +38,7 @@ public class LongitudPanel extends javax.swing.JPanel implements ValuesReadersIn
 
         jLabel1.setPreferredSize(new java.awt.Dimension(34, 34));
 
-        panelTitle1.setText("Conversor de longitudes");
+        panelTitle1.setText("Conversor de masa");
 
         textField2.setEnabled(false);
 
@@ -114,7 +114,7 @@ public class LongitudPanel extends javax.swing.JPanel implements ValuesReadersIn
     }//GEN-LAST:event_actionBtn1ActionPerformed
 
     private void comboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBox1ActionPerformed
-        ImportBeans.fillCombo(comboBox1, comboBox2, smi);
+        ImportBeans.fillCombo(comboBox1, comboBox2, masa);
     }//GEN-LAST:event_comboBox1ActionPerformed
 
 

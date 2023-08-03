@@ -1,5 +1,6 @@
 controller/beans/ImportBeans.class
 view/modules/btns/Btns.class
+view/panels/MasaPanel$1.class
 view/App$2.class
 view/App$4.class
 view/modules/btns/TitleBtns.class
@@ -21,6 +22,7 @@ view/App$3.class
 view/panels/TempPanel$2.class
 view/modules/btns/ActionBtn$1.class
 view/modules/comboBox/ComboBox.class
+view/panels/MasaPanel$2.class
 view/App$1.class
 view/panels/LongitudPanel$1.class
 controller/beans/ImportBeans$1.class
@@ -30,6 +32,7 @@ view/App$6.class
 controller/beans/ColorBeans.class
 controller/logic/LongLogic.class
 view/modules/comboBox/ComboBox$1.class
+view/panels/MasaPanel.class
 controller/beans/FontBeans.class
 view/modules/textFields/textField$1.class
 view/modules/panels/LeftPane.class
