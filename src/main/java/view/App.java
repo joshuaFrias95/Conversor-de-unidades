@@ -2,11 +2,7 @@ package view;
 
 import java.awt.BorderLayout;
 import javax.swing.JPanel;
-import view.panels.BytesPanel;
-import view.panels.DivisasPanel;
-import view.panels.HomePanel;
-import view.panels.MedidasPanel;
-import view.panels.PesoPanel;
+import view.panels.LongitudPanel;
 import view.panels.TempPanel;
 
 public class App extends javax.swing.JFrame {
@@ -18,7 +14,7 @@ public class App extends javax.swing.JFrame {
         
         initComponents();
         
-       paintContent(new HomePanel());
+       paintContent(new LongitudPanel());
     }
 
     @SuppressWarnings("unchecked")
@@ -104,7 +100,7 @@ public class App extends javax.swing.JFrame {
             }
         });
 
-        distBtn.setText("Distancia");
+        distBtn.setText("Longitud");
         distBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 distBtnActionPerformed(evt);
@@ -152,7 +148,7 @@ public class App extends javax.swing.JFrame {
                 .addComponent(pesoBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(bytesBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(218, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         main.add(leftPane2, java.awt.BorderLayout.WEST);
@@ -165,7 +161,7 @@ public class App extends javax.swing.JFrame {
         );
         contentLayout.setVerticalGroup(
             contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 590, Short.MAX_VALUE)
+            .addGap(0, 363, Short.MAX_VALUE)
         );
 
         main.add(content, java.awt.BorderLayout.CENTER);
@@ -180,7 +176,7 @@ public class App extends javax.swing.JFrame {
     }//GEN-LAST:event_titleBtns1ActionPerformed
 
     private void divisasBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divisasBtnActionPerformed
-        paintContent(new DivisasPanel());
+        //paintContent(new DivisasPanel2());
     }//GEN-LAST:event_divisasBtnActionPerformed
 
     private void tempBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tempBtnActionPerformed
@@ -188,15 +184,15 @@ public class App extends javax.swing.JFrame {
     }//GEN-LAST:event_tempBtnActionPerformed
 
     private void distBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_distBtnActionPerformed
-        paintContent(new MedidasPanel());
+        paintContent(new LongitudPanel());
     }//GEN-LAST:event_distBtnActionPerformed
 
     private void pesoBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pesoBtnActionPerformed
-        paintContent(new PesoPanel());
+        //paintContent(new PesoPanel2());
     }//GEN-LAST:event_pesoBtnActionPerformed
 
     private void bytesBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bytesBtnActionPerformed
-        paintContent(new BytesPanel());
+        //paintContent(new BytesPanel2());
     }//GEN-LAST:event_bytesBtnActionPerformed
 
     public static void main(String args[]) {

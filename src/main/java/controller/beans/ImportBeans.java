@@ -66,6 +66,7 @@ public class ImportBeans {
      * @param values - String de valores que van a llenar el parámetro "com"
      */
     public static void fillCombo(JComboBox com, String[] values) {
+        com.removeAll();
         for(int i = 0; i < values.length; i++) {
             com.addItem(values[i]);
         }

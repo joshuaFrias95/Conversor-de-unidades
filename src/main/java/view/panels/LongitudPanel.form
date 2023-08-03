@@ -40,9 +40,9 @@
                           <Component id="panelTitle1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="comboBox2" min="-2" pref="190" max="-2" attributes="0"/>
-                              <Component id="comboBox1" min="-2" pref="190" max="-2" attributes="0"/>
+                              <Component id="comboBox1" alignment="0" min="-2" pref="190" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="108" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
@@ -66,8 +66,8 @@
                   </Group>
                   <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="comboBox1" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                       <Component id="textField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="comboBox1" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="114" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -82,11 +82,6 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="view.modules.comboBox.ComboBox" name="comboBox1">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="comboBox1ActionPerformed"/>
-          </Events>
-        </Component>
         <Component class="view.modules.comboBox.ComboBox" name="comboBox2">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel1">
@@ -98,7 +93,7 @@
         </Component>
         <Component class="view.modules.txts.PanelTitle" name="panelTitle1">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Conversor de temperatura"/>
+            <Property name="text" type="java.lang.String" value="Conversor de longitudes"/>
           </Properties>
         </Component>
         <Component class="view.modules.textFields.textField" name="textField1">
@@ -114,6 +109,11 @@
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="actionBtn1ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="view.modules.comboBox.ComboBox" name="comboBox1">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="comboBox1ActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

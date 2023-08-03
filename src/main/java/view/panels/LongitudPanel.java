@@ -1,24 +1,26 @@
 package view.panels;
 
 import controller.beans.ImportBeans;
+import controller.logic.LongLogic;
 import controller.logic.TempLogic;
 import controller.templates.ValuesReadersInterface;
 
-public class TempPanel extends javax.swing.JPanel implements ValuesReadersInterface {
+public class LongitudPanel extends javax.swing.JPanel implements ValuesReadersInterface {
     
 
-    String[] temp = {
-        "Celsius",
-        "Fahrenheit",
-        "Kelvin"
+    String[] smi = {
+        "Milímetros",
+        "Centímetros",
+        "Metros",
+        "Kilómetros"
     };
     
-    public TempPanel() {
+    public LongitudPanel() {
         initComponents();
         
         ImportBeans.justNumbers(textField1, textField2);
-        ImportBeans.fillCombo(comboBox1, temp);
-        ImportBeans.ImportImage("src/main/java/view/img/temperatura.png", jLabel1);
+        ImportBeans.fillCombo(comboBox1, smi);
+        ImportBeans.ImportImage("src/main/java/view/img/medidas.png", jLabel1);
         ImportBeans.ImportImage("src/main/java/view/img/convertir.png", actionBtn1);
     }
     
@@ -27,23 +29,17 @@ public class TempPanel extends javax.swing.JPanel implements ValuesReadersInterf
     private void initComponents() {
 
         rightPane1 = new view.modules.panels.RightPane();
-        comboBox1 = new view.modules.comboBox.ComboBox();
         comboBox2 = new view.modules.comboBox.ComboBox();
         jLabel1 = new javax.swing.JLabel();
         panelTitle1 = new view.modules.txts.PanelTitle();
         textField1 = new view.modules.textFields.textField();
         textField2 = new view.modules.textFields.textField();
         actionBtn1 = new view.modules.btns.ActionBtn();
-
-        comboBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                comboBox1ActionPerformed(evt);
-            }
-        });
+        comboBox1 = new view.modules.comboBox.ComboBox();
 
         jLabel1.setPreferredSize(new java.awt.Dimension(34, 34));
 
-        panelTitle1.setText("Conversor de temperatura");
+        panelTitle1.setText("Conversor de longitudes");
 
         textField2.setEnabled(false);
 
@@ -51,6 +47,12 @@ public class TempPanel extends javax.swing.JPanel implements ValuesReadersInterf
         actionBtn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 actionBtn1ActionPerformed(evt);
+            }
+        });
+
+        comboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboBox1ActionPerformed(evt);
             }
         });
 
@@ -66,7 +68,7 @@ public class TempPanel extends javax.swing.JPanel implements ValuesReadersInterf
                         .addGap(18, 18, 18)
                         .addComponent(panelTitle1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(rightPane1Layout.createSequentialGroup()
-                        .addGroup(rightPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(rightPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(comboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(comboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(108, 108, 108)
@@ -85,8 +87,8 @@ public class TempPanel extends javax.swing.JPanel implements ValuesReadersInterf
                     .addComponent(panelTitle1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(93, 93, 93)
                 .addGroup(rightPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(comboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(textField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(comboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(114, 114, 114)
                 .addGroup(rightPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(comboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -108,13 +110,13 @@ public class TempPanel extends javax.swing.JPanel implements ValuesReadersInterf
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void comboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBox1ActionPerformed
-        ImportBeans.fillCombo(comboBox1, comboBox2, temp);
-    }//GEN-LAST:event_comboBox1ActionPerformed
-
     private void actionBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_actionBtn1ActionPerformed
         ReaderValue();
     }//GEN-LAST:event_actionBtn1ActionPerformed
+
+    private void comboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBox1ActionPerformed
+        ImportBeans.fillCombo(comboBox1, comboBox2, smi);
+    }//GEN-LAST:event_comboBox1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -131,50 +133,73 @@ public class TempPanel extends javax.swing.JPanel implements ValuesReadersInterf
     @Override
     public void ReaderValue() {
         
-        TempLogic tl = new TempLogic();
+        LongLogic ll = new LongLogic();
         
         switch (comboBox1.getSelectedIndex()) {
-            // Operaciones Celsius
+            // Operaciones milímetros
             case 0 -> {
                 switch (comboBox2.getSelectedIndex()) {
                     case 0 -> {
-                        tl.celsiusToFahrenheit(textField1, textField2, comboBox1, comboBox2);
-                    }
+                        ll.milimetroToCentimetro(textField1, textField2, comboBox1, comboBox2);
+                }
                     case 1 -> {
-                        tl.celsiusToKelvin(textField1, textField2, comboBox1, comboBox2);
-                    }
-                    default ->
-                        throw new AssertionError();
+                        ll.milimetroToMetro(textField1, textField2, comboBox1, comboBox2);
+                }
+                    case 2 -> {
+                        ll.milimetroToKilometro(textField1, textField2, comboBox1, comboBox2);
+                }
+                    default -> throw new AssertionError();
                 }
             }
-            // Operaciones Fahrenheit
+            
+            // Operaciones centímetros
             case 1 -> {
                 switch (comboBox2.getSelectedIndex()) {
                     case 0 -> {
-                        tl.FahrenheitToCelsius(textField1, textField2, comboBox1, comboBox2);
-                    }
+                        ll.centimetroToMilimetro(textField1, textField2, comboBox1, comboBox2);
+                }
                     case 1 -> {
-                        tl.FahrenheitToKelvin(textField1, textField2, comboBox1, comboBox2);
-                    }
-                    default ->
-                        throw new AssertionError();
+                        ll.centimetroToMetro(textField1, textField2, comboBox1, comboBox2);
+                }
+                    case 2 -> {
+                        ll.centimetroToKilometro(textField1, textField2, comboBox1, comboBox2);
+                }
+                    default -> throw new AssertionError();
                 }
             }
-            // Operaciones Kelvin
+            
+            // Operaciones metros
             case 2 -> {
                 switch (comboBox2.getSelectedIndex()) {
                     case 0 -> {
-                        tl.kelvinToCelsius(textField1, textField2, comboBox1, comboBox2);
-                    }
+                        ll.metroToMilimetro(textField1, textField2, comboBox1, comboBox2);
+                }
                     case 1 -> {
-                        tl.kelvinToFahrenheit(textField1, textField2, comboBox1, comboBox2);
-                    }
-                    default ->
-                        throw new AssertionError();
+                        ll.metroToCentimetro(textField1, textField2, comboBox1, comboBox2);
+                }
+                    case 2 -> {
+                        ll.metroToKilometro(textField1, textField2, comboBox1, comboBox2);
+                }
+                    default -> throw new AssertionError();
                 }
             }
-            default ->
-                throw new AssertionError();
+            
+            // Operaciones Kilometros
+            case 3 -> {
+                switch (comboBox2.getSelectedIndex()) {
+                    case 0 -> {
+                        ll.kilometroToMilimetro(textField1, textField2, comboBox1, comboBox2);
+                }
+                    case 1 -> {
+                        ll.kilometroToCentimetro(textField1, textField2, comboBox1, comboBox2);
+                }
+                    case 2 -> {
+                        ll.kilometroToMetro(textField1, textField2, comboBox1, comboBox2);
+                }
+                    default -> throw new AssertionError();
+                }
+            }
+            default -> throw new AssertionError();
         }
     }
 }
