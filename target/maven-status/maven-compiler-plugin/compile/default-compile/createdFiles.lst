@@ -38,6 +38,7 @@ view/modules/textFields/textField$1.class
 view/modules/panels/LeftPane.class
 view/modules/btns/MenuBtns.class
 view/modules/btns/ActionBtn.class
+controller/logic/MasaLogic.class
 view/modules/panels/RightPane.class
 model/TempValues.class
 view/App.class

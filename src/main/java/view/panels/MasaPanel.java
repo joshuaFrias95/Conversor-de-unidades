@@ -1,7 +1,7 @@
 package view.panels;
 
 import controller.beans.ImportBeans;
-import controller.logic.LongLogic;
+import controller.logic.MasaLogic;
 import controller.templates.ValuesReadersInterface;
 
 public class MasaPanel extends javax.swing.JPanel implements ValuesReadersInterface {
@@ -19,8 +19,8 @@ public class MasaPanel extends javax.swing.JPanel implements ValuesReadersInterf
         
         ImportBeans.justNumbers(textField1, textField2);
         ImportBeans.fillCombo(comboBox1, masa);
-        ImportBeans.ImportImage("src/main/java/view/img/medidas.png", jLabel1);
-        ImportBeans.ImportImage("src/main/java/view/img/peso.png", actionBtn1);
+        ImportBeans.ImportImage("src/main/java/view/img/peso.png", jLabel1);
+        ImportBeans.ImportImage("src/main/java/view/img/convertirW.png", actionBtn1);
     }
     
     @SuppressWarnings("unchecked")
@@ -132,68 +132,63 @@ public class MasaPanel extends javax.swing.JPanel implements ValuesReadersInterf
     @Override
     public void ReaderValue() {
         
-        LongLogic ll = new LongLogic();
+        MasaLogic ml = new MasaLogic();
         
         switch (comboBox1.getSelectedIndex()) {
-            // Operaciones milímetros
+            // Operaciones miligramos
             case 0 -> {
                 switch (comboBox2.getSelectedIndex()) {
                     case 0 -> {
-                        ll.milimetroToCentimetro(textField1, textField2, comboBox1, comboBox2);
+                        ml.miligramoToGramo(textField1, textField2, comboBox1, comboBox2);
                 }
                     case 1 -> {
-                        ll.milimetroToMetro(textField1, textField2, comboBox1, comboBox2);
+                        ml.miligramoToKilogramo(textField1, textField2, comboBox1, comboBox2);
                 }
                     case 2 -> {
-                        ll.milimetroToKilometro(textField1, textField2, comboBox1, comboBox2);
+                        ml.miligramoToTonelada(textField1, textField2, comboBox1, comboBox2);
                 }
                     default -> throw new AssertionError();
                 }
             }
             
-            // Operaciones centímetros
+            // Operaciones gramos
             case 1 -> {
                 switch (comboBox2.getSelectedIndex()) {
                     case 0 -> {
-                        ll.centimetroToMilimetro(textField1, textField2, comboBox1, comboBox2);
+                        ml.gramoToMiligramo(textField1, textField2, comboBox1, comboBox2);
                 }
                     case 1 -> {
-                        ll.centimetroToMetro(textField1, textField2, comboBox1, comboBox2);
+                        ml.gramoToKilogramo(textField1, textField2, comboBox1, comboBox2);
                 }
                     case 2 -> {
-                        ll.centimetroToKilometro(textField1, textField2, comboBox1, comboBox2);
+                        ml.gramoToTonelada(textField1, textField2, comboBox1, comboBox2);
                 }
                     default -> throw new AssertionError();
                 }
             }
             
-            // Operaciones metros
+            // Operaciones kilogramos
             case 2 -> {
                 switch (comboBox2.getSelectedIndex()) {
                     case 0 -> {
-                        ll.metroToMilimetro(textField1, textField2, comboBox1, comboBox2);
+                        ml.toneladaToMiligramo(textField1, textField2, comboBox1, comboBox2);
                 }
                     case 1 -> {
-                        ll.metroToCentimetro(textField1, textField2, comboBox1, comboBox2);
                 }
                     case 2 -> {
-                        ll.metroToKilometro(textField1, textField2, comboBox1, comboBox2);
                 }
                     default -> throw new AssertionError();
                 }
             }
             
-            // Operaciones Kilometros
+            // Operaciones toneladas
             case 3 -> {
                 switch (comboBox2.getSelectedIndex()) {
                     case 0 -> {
-                        ll.kilometroToMilimetro(textField1, textField2, comboBox1, comboBox2);
                 }
                     case 1 -> {
-                        ll.kilometroToCentimetro(textField1, textField2, comboBox1, comboBox2);
                 }
                     case 2 -> {
-                        ll.kilometroToMetro(textField1, textField2, comboBox1, comboBox2);
                 }
                     default -> throw new AssertionError();
                 }
