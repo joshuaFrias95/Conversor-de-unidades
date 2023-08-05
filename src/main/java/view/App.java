@@ -2,6 +2,7 @@ package view;
 
 import java.awt.BorderLayout;
 import javax.swing.JPanel;
+import view.panels.DivisasPanel;
 import view.panels.LongitudPanel;
 import view.panels.MasaPanel;
 import view.panels.TempPanel;
@@ -15,7 +16,7 @@ public class App extends javax.swing.JFrame {
         
         initComponents();
         
-       paintContent(new MasaPanel());
+       paintContent(new DivisasPanel());
     }
 
     @SuppressWarnings("unchecked")
@@ -32,7 +33,6 @@ public class App extends javax.swing.JFrame {
         tempBtn = new view.modules.btns.MenuBtns();
         distBtn = new view.modules.btns.MenuBtns();
         pesoBtn = new view.modules.btns.MenuBtns();
-        bytesBtn = new view.modules.btns.MenuBtns();
         content = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -115,13 +115,6 @@ public class App extends javax.swing.JFrame {
             }
         });
 
-        bytesBtn.setText("Bytes");
-        bytesBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bytesBtnActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout leftPane2Layout = new javax.swing.GroupLayout(leftPane2);
         leftPane2.setLayout(leftPane2Layout);
         leftPane2Layout.setHorizontalGroup(
@@ -132,8 +125,7 @@ public class App extends javax.swing.JFrame {
                     .addComponent(divisasBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(tempBtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
                     .addComponent(distBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
-                    .addComponent(pesoBtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
-                    .addComponent(bytesBtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE))
+                    .addComponent(pesoBtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE))
                 .addContainerGap())
         );
         leftPane2Layout.setVerticalGroup(
@@ -147,9 +139,7 @@ public class App extends javax.swing.JFrame {
                 .addComponent(distBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(pesoBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(bytesBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
 
         main.add(leftPane2, java.awt.BorderLayout.WEST);
@@ -177,7 +167,7 @@ public class App extends javax.swing.JFrame {
     }//GEN-LAST:event_titleBtns1ActionPerformed
 
     private void divisasBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divisasBtnActionPerformed
-        //paintContent(new DivisasPanel2());
+        paintContent(new DivisasPanel());
     }//GEN-LAST:event_divisasBtnActionPerformed
 
     private void tempBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tempBtnActionPerformed
@@ -192,10 +182,6 @@ public class App extends javax.swing.JFrame {
         paintContent(new MasaPanel());
     }//GEN-LAST:event_pesoBtnActionPerformed
 
-    private void bytesBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bytesBtnActionPerformed
-        //paintContent(new BytesPanel2());
-    }//GEN-LAST:event_bytesBtnActionPerformed
-
     public static void main(String args[]) {
         
         java.awt.EventQueue.invokeLater(() -> {
@@ -206,7 +192,6 @@ public class App extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private view.modules.btns.MenuBtns bytesBtn;
     private javax.swing.JPanel content;
     private view.modules.btns.MenuBtns distBtn;
     private view.modules.btns.MenuBtns divisasBtn;

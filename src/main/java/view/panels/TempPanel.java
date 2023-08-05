@@ -19,7 +19,7 @@ public class TempPanel extends javax.swing.JPanel implements ValuesReadersInterf
         ImportBeans.justNumbers(textField1, textField2);
         ImportBeans.fillCombo(comboBox1, temp);
         ImportBeans.ImportImage("src/main/java/view/img/temperatura.png", jLabel1);
-        ImportBeans.ImportImage("src/main/java/view/img/convertir.png", actionBtn1);
+        ImportBeans.ImportImage("src/main/java/view/img/convertirW.png", actionBtn1);
     }
     
     @SuppressWarnings("unchecked")

@@ -1,25 +1,25 @@
 package view.panels;
 
 import controller.beans.ImportBeans;
-import controller.logic.MasaLogic;
+import controller.logic.LongLogic;
 import controller.templates.ValuesReadersInterface;
 
-public class MasaPanel extends javax.swing.JPanel implements ValuesReadersInterface {
+public class DivisasPanel extends javax.swing.JPanel implements ValuesReadersInterface {
     
 
-    String[] masa = {
-        "Milígramo",
-        "Gramo",
-        "Kilogramo",
-        "Tonelada"
+    String[] smi = {
+        "Milímetros",
+        "Centímetros",
+        "Metros",
+        "Kilómetros"
     };
     
-    public MasaPanel() {
+    public DivisasPanel() {
         initComponents();
         
         ImportBeans.justNumbers(textField1, textField2);
-        ImportBeans.fillCombo(comboBox1, masa);
-        ImportBeans.ImportImage("src/main/java/view/img/peso.png", jLabel1);
+        ImportBeans.fillCombo(comboBox1, smi);
+        ImportBeans.ImportImage("src/main/java/view/img/divisas.png", jLabel1);
         ImportBeans.ImportImage("src/main/java/view/img/convertirW.png", actionBtn1);
     }
     
@@ -38,7 +38,7 @@ public class MasaPanel extends javax.swing.JPanel implements ValuesReadersInterf
 
         jLabel1.setPreferredSize(new java.awt.Dimension(34, 34));
 
-        panelTitle1.setText("Conversor de masa");
+        panelTitle1.setText("Conversor de divisas");
 
         textField2.setEnabled(false);
 
@@ -114,7 +114,7 @@ public class MasaPanel extends javax.swing.JPanel implements ValuesReadersInterf
     }//GEN-LAST:event_actionBtn1ActionPerformed
 
     private void comboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBox1ActionPerformed
-        ImportBeans.fillCombo(comboBox1, comboBox2, masa);
+        ImportBeans.fillCombo(comboBox1, comboBox2, smi);
     }//GEN-LAST:event_comboBox1ActionPerformed
 
 
@@ -132,68 +132,68 @@ public class MasaPanel extends javax.swing.JPanel implements ValuesReadersInterf
     @Override
     public void ReaderValue() {
         
-        MasaLogic ml = new MasaLogic();
+        LongLogic ll = new LongLogic();
         
         switch (comboBox1.getSelectedIndex()) {
-            // Operaciones miligramos
+            // Operaciones milímetros
             case 0 -> {
                 switch (comboBox2.getSelectedIndex()) {
                     case 0 -> {
-                        ml.miligramoToGramo(textField1, textField2, comboBox1, comboBox2);
+                        ll.milimetroToCentimetro(textField1, textField2, comboBox1, comboBox2);
                 }
                     case 1 -> {
-                        ml.miligramoToKilogramo(textField1, textField2, comboBox1, comboBox2);
+                        ll.milimetroToMetro(textField1, textField2, comboBox1, comboBox2);
                 }
                     case 2 -> {
-                        ml.miligramoToTonelada(textField1, textField2, comboBox1, comboBox2);
+                        ll.milimetroToKilometro(textField1, textField2, comboBox1, comboBox2);
                 }
                     default -> throw new AssertionError();
                 }
             }
             
-            // Operaciones gramos
+            // Operaciones centímetros
             case 1 -> {
                 switch (comboBox2.getSelectedIndex()) {
                     case 0 -> {
-                        ml.gramoToMiligramo(textField1, textField2, comboBox1, comboBox2);
+                        ll.centimetroToMilimetro(textField1, textField2, comboBox1, comboBox2);
                 }
                     case 1 -> {
-                        ml.gramoToKilogramo(textField1, textField2, comboBox1, comboBox2);
+                        ll.centimetroToMetro(textField1, textField2, comboBox1, comboBox2);
                 }
                     case 2 -> {
-                        ml.gramoToTonelada(textField1, textField2, comboBox1, comboBox2);
+                        ll.centimetroToKilometro(textField1, textField2, comboBox1, comboBox2);
                 }
                     default -> throw new AssertionError();
                 }
             }
             
-            // Operaciones kilogramos
+            // Operaciones metros
             case 2 -> {
                 switch (comboBox2.getSelectedIndex()) {
                     case 0 -> {
-                        ml.kilogramoToMiligramo(textField1, textField2, comboBox1, comboBox2);
+                        ll.metroToMilimetro(textField1, textField2, comboBox1, comboBox2);
                 }
                     case 1 -> {
-                        ml.kilogramoToGramo(textField1, textField2, comboBox1, comboBox2);
+                        ll.metroToCentimetro(textField1, textField2, comboBox1, comboBox2);
                 }
                     case 2 -> {
-                        ml.kilogramoToTonelada(textField1, textField2, comboBox1, comboBox2);
+                        ll.metroToKilometro(textField1, textField2, comboBox1, comboBox2);
                 }
                     default -> throw new AssertionError();
                 }
             }
             
-            // Operaciones toneladas
+            // Operaciones Kilometros
             case 3 -> {
                 switch (comboBox2.getSelectedIndex()) {
                     case 0 -> {
-                        ml.toneladaToMiligramo(textField1, textField2, comboBox1, comboBox2);
+                        ll.kilometroToMilimetro(textField1, textField2, comboBox1, comboBox2);
                 }
                     case 1 -> {
-                        ml.toneladaToGramo(textField1, textField2, comboBox1, comboBox2);
+                        ll.kilometroToCentimetro(textField1, textField2, comboBox1, comboBox2);
                 }
                     case 2 -> {
-                        ml.toneladaToKilogramo(textField1, textField2, comboBox1, comboBox2);
+                        ll.kilometroToMetro(textField1, textField2, comboBox1, comboBox2);
                 }
                     default -> throw new AssertionError();
                 }

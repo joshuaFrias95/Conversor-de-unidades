@@ -70,13 +70,36 @@ public class MasaLogic {
     
     public void toneladaToGramo(JTextField txt1, JTextField txt2, JComboBox com1, JComboBox com2) {
         valor = Double.valueOf(txt1.getText());
+        result = valor * Math.pow(10, 6);
+        txt2.setText(Double.toString(result));
+    }
+    
+    public void toneladaToKilogramo(JTextField txt1, JTextField txt2, JComboBox com1, JComboBox com2) {
+        valor = Double.valueOf(txt1.getText());
+        result = valor * Math.pow(10, 3);
+        txt2.setText(Double.toString(result));
+    }   
+    
+    
+    /*
+        Métodos Kilogramo
+    */
+    
+    public void kilogramoToMiligramo(JTextField txt1, JTextField txt2, JComboBox com1, JComboBox com2) {
+        valor = Double.valueOf(txt1.getText());
+        result = valor * Math.pow(10, 6);
+        txt2.setText(Double.toString(result));
+    }
+    
+    public void kilogramoToGramo(JTextField txt1, JTextField txt2, JComboBox com1, JComboBox com2) {
+        valor = Double.valueOf(txt1.getText());
         result = valor * Math.pow(10, 3);
         txt2.setText(Double.toString(result));
     }
     
-    public void gramoToTonelada(JTextField txt1, JTextField txt2, JComboBox com1, JComboBox com2) {
+    public void kilogramoToTonelada(JTextField txt1, JTextField txt2, JComboBox com1, JComboBox com2) {
         valor = Double.valueOf(txt1.getText());
-        result = valor / Math.pow(10, 6);
+        result = valor / Math.pow(10, 3);
         txt2.setText(Double.toString(result));
     }
 }
