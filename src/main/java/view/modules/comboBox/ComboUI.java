@@ -26,6 +26,7 @@ public class ComboUI extends BasicComboBoxUI {
         basicComboPopUp.setBorder(new LineBorder(ColorBeans.getLftColor()));
         return basicComboPopUp;
     }
+
     
     
 

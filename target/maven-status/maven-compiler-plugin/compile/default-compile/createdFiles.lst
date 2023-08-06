@@ -8,6 +8,7 @@ view/modules/btns/MenuBtns$1.class
 controller/templates/ValuesReadersInterface.class
 controller/beans/ImportBeans$2.class
 view/panels/DivisasPanel$2.class
+model/APIRequest.class
 view/panels/TempPanel.class
 view/modules/textFields/textField.class
 view/modules/contentPanels/ContentPanel.class

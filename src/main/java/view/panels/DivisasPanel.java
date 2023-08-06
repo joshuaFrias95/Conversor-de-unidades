@@ -3,22 +3,30 @@ package view.panels;
 import controller.beans.ImportBeans;
 import controller.logic.LongLogic;
 import controller.templates.ValuesReadersInterface;
+import model.APIRequest;
 
 public class DivisasPanel extends javax.swing.JPanel implements ValuesReadersInterface {
     
 
-    String[] smi = {
-        "Milímetros",
-        "Centímetros",
-        "Metros",
-        "Kilómetros"
+    String[] currency = {
+        "MXN",
+        "ARS",
+        "NIO",
+        "PAB",
+        "PEN",
+        "PYG",
+        "RUB",
+        "TWD",
+        "USD",
+        "UYU",
+        "VES"
     };
     
     public DivisasPanel() {
         initComponents();
         
         ImportBeans.justNumbers(textField1, textField2);
-        ImportBeans.fillCombo(comboBox1, smi);
+        ImportBeans.fillCombo(comboBox1, currency);
         ImportBeans.ImportImage("src/main/java/view/img/divisas.png", jLabel1);
         ImportBeans.ImportImage("src/main/java/view/img/convertirW.png", actionBtn1);
     }
@@ -110,11 +118,15 @@ public class DivisasPanel extends javax.swing.JPanel implements ValuesReadersInt
     }// </editor-fold>//GEN-END:initComponents
 
     private void actionBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_actionBtn1ActionPerformed
-        ReaderValue();
+        Double tasaConversion = new APIRequest().requestCurrency("3dcf9c7de1be7ff9f3ab358a", (String) comboBox1.getSelectedItem(), (String) comboBox2.getSelectedItem());
+        
+        //double result = tasaConversion * comboBox1.getSelectedItem();
+        Double result = tasaConversion * Double.valueOf(textField1.getText());
+        textField2.setText(Double.toString(result));
     }//GEN-LAST:event_actionBtn1ActionPerformed
 
     private void comboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBox1ActionPerformed
-        ImportBeans.fillCombo(comboBox1, comboBox2, smi);
+        ImportBeans.fillCombo(comboBox1, comboBox2, currency);
     }//GEN-LAST:event_comboBox1ActionPerformed
 
 
