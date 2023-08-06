@@ -11,13 +11,13 @@ import view.panels.TempPanel;
 public class App extends javax.swing.JFrame {
 
     public App() {
-        
+
         setResizable(false);
         setUndecorated(true);
-        
+
         initComponents();
-        
-       paintContent(new HomePanel());
+
+        paintContent(new HomePanel());
     }
 
     @SuppressWarnings("unchecked")
@@ -184,7 +184,7 @@ public class App extends javax.swing.JFrame {
     }//GEN-LAST:event_pesoBtnActionPerformed
 
     public static void main(String args[]) {
-        
+
         java.awt.EventQueue.invokeLater(() -> {
             App app = new App();
             app.setLocationRelativeTo(null);
@@ -206,10 +206,16 @@ public class App extends javax.swing.JFrame {
     private view.modules.btns.TitleBtns titleBtns1;
     // End of variables declaration//GEN-END:variables
 
+    /**
+     * Método que permite mostrar un panel dentro de otro. Es utilizado para mostrar
+     * el Home Panel y para visualizar los diferentes conversores
+     * 
+     * @param panel - Panel que será mostrado en pantalla
+     */
     private void paintContent(JPanel panel) {
         panel.setSize(820, 590);
-        panel.setLocation(0,0);
-        
+        panel.setLocation(0, 0);
+
         content.removeAll();
         content.add(panel, BorderLayout.CENTER);
         content.revalidate();

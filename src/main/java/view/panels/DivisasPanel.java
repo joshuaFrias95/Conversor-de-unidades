@@ -8,7 +8,7 @@ import model.APIRequest;
 public class DivisasPanel extends javax.swing.JPanel implements ValuesReadersInterface {
     
 
-    String[] currency = {
+    static String[] currency = {
         "MXN",
         "ARS",
         "NIO",
@@ -120,7 +120,6 @@ public class DivisasPanel extends javax.swing.JPanel implements ValuesReadersInt
     private void actionBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_actionBtn1ActionPerformed
         Double tasaConversion = new APIRequest().requestCurrency("3dcf9c7de1be7ff9f3ab358a", (String) comboBox1.getSelectedItem(), (String) comboBox2.getSelectedItem());
         
-        //double result = tasaConversion * comboBox1.getSelectedItem();
         Double result = tasaConversion * Double.valueOf(textField1.getText());
         textField2.setText(Double.toString(result));
     }//GEN-LAST:event_actionBtn1ActionPerformed
