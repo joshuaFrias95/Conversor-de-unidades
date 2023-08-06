@@ -1,7 +1,6 @@
 /home/lagrimasnegras/NetBeansProjects/Conversor/src/main/java/controller/beans/FontBeans.java
 /home/lagrimasnegras/NetBeansProjects/Conversor/src/main/java/controller/logic/MasaLogic.java
 /home/lagrimasnegras/NetBeansProjects/Conversor/src/main/java/view/modules/panels/RightPane.java
-/home/lagrimasnegras/NetBeansProjects/Conversor/src/main/java/view/modules/table/CurrencyTable.java
 /home/lagrimasnegras/NetBeansProjects/Conversor/src/main/java/view/panels/LongitudPanel.java
 /home/lagrimasnegras/NetBeansProjects/Conversor/src/main/java/view/modules/textFields/textField.java
 /home/lagrimasnegras/NetBeansProjects/Conversor/src/main/java/view/modules/btns/ActionBtn.java
@@ -23,7 +22,6 @@
 /home/lagrimasnegras/NetBeansProjects/Conversor/src/main/java/view/modules/btns/MenuBtns.java
 /home/lagrimasnegras/NetBeansProjects/Conversor/src/main/java/view/modules/contentPanels/ContentPanel.java
 /home/lagrimasnegras/NetBeansProjects/Conversor/src/main/java/view/panels/DivisasPanel.java
-/home/lagrimasnegras/NetBeansProjects/Conversor/src/main/java/view/panels/CurrencyInfo.java
 /home/lagrimasnegras/NetBeansProjects/Conversor/src/main/java/view/panels/HomePanel.java
 /home/lagrimasnegras/NetBeansProjects/Conversor/src/main/java/view/panels/MasaPanel.java
 /home/lagrimasnegras/NetBeansProjects/Conversor/src/main/java/controller/beans/ColorBeans.java

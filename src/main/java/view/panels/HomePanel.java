@@ -8,7 +8,7 @@ public class HomePanel extends javax.swing.JPanel {
     public HomePanel() {
         initComponents();
         
-        ImportBeans.ImportImage("src/main/java/view/img/aluraBlanco.png", logo);
+        ImportBeans.ImportImage("aluraBlanco.png", logo);
     }
 
     @SuppressWarnings("unchecked")
