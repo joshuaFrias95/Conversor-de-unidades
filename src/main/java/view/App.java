@@ -3,6 +3,7 @@ package view;
 import java.awt.BorderLayout;
 import javax.swing.JPanel;
 import view.panels.DivisasPanel;
+import view.panels.HomePanel;
 import view.panels.LongitudPanel;
 import view.panels.MasaPanel;
 import view.panels.TempPanel;
@@ -16,7 +17,7 @@ public class App extends javax.swing.JFrame {
         
         initComponents();
         
-       paintContent(new DivisasPanel());
+       paintContent(new HomePanel());
     }
 
     @SuppressWarnings("unchecked")
