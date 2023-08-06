@@ -7,6 +7,10 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import org.json.JSONObject;
 
+/**
+ * Realizamos la petición de valores JSON a la API "exchange rate - api
+ * 
+ */
 public class APIRequest {
 
     @SuppressWarnings("empty-statement")
@@ -36,6 +40,13 @@ public class APIRequest {
 
     
 
+    /**
+     * Este método nos permite leer los valores JSON traidos de la API 
+     * siempre y cuando se haya realizado correctamente la conexión
+     * 
+     * @param httpCode - STATUS CODE que nos devuelve la petición HTTP
+     * @param connection
+     */
     private double ResponseCodeAndGetRate(int httpCode, HttpURLConnection connection) throws IOException {
 
         if (httpCode == HttpURLConnection.HTTP_OK) {
